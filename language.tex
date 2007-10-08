@@ -1,0 +1,19 @@
+\newenvironment{stGlossary}
+{
+\section{Glossaire}
+\begin{description}
+}
+{
+\end{description}
+}
+
+\newcommand{\stWordDefinition}[1]
+{\item[\csname st#1Term\endcsname]: \csname st#1Definition\endcsname
+}
+
+
+\newcommand{\stNilTerm}{nil}
+\newcommand{\stTrueAndFalseTerm}{true {\rm \stAndTerm} false}
+\newcommand{\stSelfTerm}{self}
+\newcommand{\stSuperTerm}{super}
+\newcommand{\stThisContextTerm}{thisContext}

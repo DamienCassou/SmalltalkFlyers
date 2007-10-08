@@ -1,0 +1,241 @@
+\newcommand{\stSmalltalkSubtitle}
+{un langage de programmation\\
+  purement \textbf{orienté objet}\\
+  et un environnement \textbf{dynamique}}
+
+\newcommand{\stSmalltalkConceptsTerm}{Concepts importants de Smalltalk}
+\newcommand{\stSmalltalkConceptsDefinition}
+{Smalltalk est un langage \emph{orienté objet}, à \emph{typage
+    dynamique} dont la syntaxe est minimale et peut s'apprendre en
+  \emph{quinze minutes}.
+
+  Sa principale force vient du fait qu'il soit \emph{très cohérent} :
+\begin{itemize}
+\item tout est objet : les classes, les méthodes, les nombres, etc.
+\item très peu de règles et aucune exception.
+\end{itemize}
+
+Smalltalk fonctionne sur le principe d'une \emph{machine virtuelle}.
+Le développement se fait dans une \emph{image mémoire} dans laquelle
+se trouve l'ensemble des objets du système avec lesquels il est
+possible d'interagir.}
+
+\newcommand{\stSmalltalkSyntaxTerm}{Syntaxe Smalltalk}
+\newcommand{\stReservedWordsTerm}{Mots réservés}
+\newcommand{\stReservedCaractersTerm}{Caractères réservés}
+
+\newcommand{\stMessageSendingTerm}{Envoi de messages}
+\newcommand{\stMessageSendingDefinition}
+{L'appel de méthode se fait par envoi de message. Le message se
+  construit sur la base du langage naturel avec un sujet, un verbe et
+  des compléments. Tout envoi de message retourne un objet. Tous les
+  messages sont envoyés à un objet que l'on appelle le receveur du
+  message. Il existe trois types de messages : unaire, binaire et à
+  mots-clés.}
+
+\newcommand{\stUnaryMessagesTerm}{Messages unaires.}
+\newcommand{\stUnaryMessagesDefinition}
+{Un message unaire n'a pas d'argument.
+
+\begin{displaycode}
+array := Array new.
+
+array size.             ==> 0
+\end{displaycode}
+
+
+Le premier exemple crée et retourne une nouvelle instance de la classe
+Array en lui envoyant le message \code{new}. Le deuxième exemple
+demande la taille du tableau ce qui retourne \code{0}.}
+
+\newcommand{\stBinaryMessagesTerm}{Messages binaires.}
+\newcommand{\stBinaryMessagesDefinition}
+{Un message binaire ne prend qu'un argument, se nomme par un symbole et
+est souvent utilisé pour des opérations arithmétiques.
+
+\begin{displaycode}
+3 + 4.                ==> 7
+
+'Hello', ' World'.    ==> 'Hello World'
+\end{displaycode}
+
+Le message \code{+} est envoyé à l'objet \code{3} avec comme paramètre \code{4}. Dans le
+second cas, le message \code{,} est envoyé à la chaîne de caractères
+\code{'Hello'} avec \code{' World'} en paramètre.
+}
+
+\newcommand{\stKeywordMessagesTerm}{Messages à mots-clés.}
+\newcommand{\stKeywordMessagesDefinition}
+{
+Un message à mots-clés peut prendre un ou plusieurs arguments. Les
+arguments sont insérés entre chaque mot-clé, après les deux-points.
+
+\begin{displaycode}
+'Smalltalk' allButFirst: 5.    ==> 'talk'
+
+3 to: 10 by: 2. ==> Intervalle avec 3,5,7 et 9
+\end{displaycode}
+
+Le premier exemple appelle la méthode \code{allButFirst:} sur une chaîne de
+caractères et passe l'argument \code{5}. La méthode retourne la chaîne de
+caractères \code{'talk'}. Le deuxième exemple retourne une collection
+contenant les éléments \code{3}, \code{5}, \code{7} et \code{9}.
+}
+
+\newcommand{\stDevelopmentEnvironmentTerm}{Environnement de développement}
+\newcommand{\stDevelopmentEnvironmentDefinition}
+{
+La plupart des implémentations de Smalltalk sont fournies avec un
+environnement de développement intégré qui permet de naviguer dans le
+code et d'interagir avec les objets. De nombreux outils sont
+disponibles, tous implémentés en Smalltalk grâce à une API de
+réflexion :
+
+\begin{itemize}
+\item un navigateur de classes et de méthodes ;
+\item des outils de refactorisation ;
+\item un inspecteur d'objets ;
+\item un débogueur ;
+\item etc.
+\end{itemize}
+
+L'environnement permet d'évaluer du code par un simple raccourci
+clavier et de voir immédiatement le résultat.
+}
+
+\newcommand{\stImplementationTerm}{Implémentations}
+\newcommand{\stImplementationDefinition}
+{
+Il existe différentes implémentations de Smalltalk :
+\begin{description}
+\item[Squeak] : implémentation libre, gratuite et multi-plateforme. Activement
+  développée par une communauté internationale.
+\item[Visual Works] : implémentation propriétaire et multi-plateforme,
+  disponible gratuitement pour une utilisation personnelle.
+\item[Gemstone] : implémentation propriétaire qui intègre une base de
+  données objet à hautes performances.
+\item[Et d'autres] : GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
+\end{description}
+}
+
+\newcommand{\stSqueakCodeBrowserTerm}{Le navigateur de code de Squeak}
+
+\newcommand{\stApplicationsTerm}{Applications}
+\newcommand{\stApplicationsDefinition}
+{
+\begin{description}
+\item[Éducation] : EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
+\item[Multimédia] : Sophie, OpenCroquet, Plopp\dots
+\item[Développement web] : Seaside, Aida, Komanche, Swazoo\dots
+\item[Gestion de la persistance] : base de données objets (Magma, GemStone), relationnelles (MySQL, PostgreSQL), mapping objet relationnel (Glorp).
+\end{description}
+}
+
+\newcommand{\stPloppDrawingSessionTerm}{Une session de dessin dans Plopp}
+
+\newcommand{\stImageTerm}{Image mémoire}
+\newcommand{\stImageDefinition}
+{L'environnement Smalltalk contient un entrepôt persistant d'objets,
+  l'image. Elle contient le code de l'application (les classes et les
+  méthodes), les objets qui constituent l'état de l'application et
+  peut même contenir l'environnement de programmation pour inspecter
+  et déboguer le programme pendant qu'il s'exécute.}
+
+\newcommand{\stVMTerm}{Machine virtuelle}
+\newcommand{\stVMDefinition}
+{Une machine virtuelle est un programme qui est capable d'exécuter
+  d'autres programmes. Cela permet de faciliter la portabilité des
+  applications que l'on développe.}
+
+\newcommand{\stReflexionTerm}{Réflexion}
+\newcommand{\stReflexionDefinition}
+{On dit qu'un langage est réflexif s'il dispose de mécanismes
+  permettant d'inspecter et de modifier du code pendant l'exécution
+  d'un programme.}
+
+\newcommand{\stDynamicTypingTerm}{Typage dynamique}
+\newcommand{\stDynamicTypingDefinition}
+{Certains langages forcent le développeur à indiquer le type de chaque
+  variable (entier, chaîne de caractères\dots). On appelle cela le
+  typage statique. En typage dynamique, le développeur ne contraint
+  pas ses variables à un type particulier.}
+
+\newcommand{\stBooksTerm}{Ouvrages}
+\newcommand{\stBooksDefinition}
+{
+\begin{itemize}
+\item Nombreux livres téléchargeables gratuitement\\
+  \url{http://stephane.ducasse.free.fr/Books.html}
+
+\item Smalltalk en général
+  \begin{itemize}
+  \item \emph{Smalltalk with Style}\\
+		(Edward Klimas, Suzanne Skublics et
+    David A. Thomas, gratuit)
+  \item \emph{Smalltalk by Example: the Developer's Guide} --
+		(Alec Sharp, gratuit)
+  \end{itemize}
+
+\item Squeak en particulier
+  \begin{itemize}
+  \item \emph{Squeak by Example} -- (2007, libre, traduction en cours)
+  \item \emph{Squeak} -- (Xavier Briffault et Stéphane Ducasse, en français)
+  \item \emph{Powerful Ideas in the Classroom}\\
+		(BJ Allen-Conn et Kim Rose, en anglais et français)
+  \end{itemize}
+\end{itemize}
+}
+
+\newcommand{\stSmalltalkActionsTerm}{Manifestations}
+\newcommand{\stSmalltalkActionsDefinition}
+{
+\begin{itemize}
+\item Smalltalk Party : Journée francophone annuelle, organisée à
+  Paris par les Smalltalkiens français.\\
+  \url{http://community.ofset.org/wiki/SmalltalkParty}
+\item Conférence du groupe européen des utilisateurs de Smalltalk
+  (ESUG). Elle réunit chaque année, depuis 1993, les Smalltalkiens
+  industriels et académiques dans un pays d'Europe.\\
+  \url{http://www.esug.org/conferences}
+\item Conférence annuelle, organisée en Amérique du nord par le STIC,
+  association qui réuni les grands acteurs industriels et éditeurs
+  de Smalltalk.\\ \url{http://www.smalltalksolutions.com/}
+\end{itemize}
+}
+
+\newcommand{\stInternetWebsitesDefinition}
+{
+\begin{itemize}
+\item Site officiel en anglais :\\ \url{http://www.squeak.org}
+\item Wiki francophone :\\ \url{http://community.ofset.org/wiki/Squeak}
+\end{itemize}
+}
+
+\newcommand{\stNilDefinition}{objet indéfini (valeur par défaut des
+  variables).}
+\newcommand{\stTrueAndFalseDefinition}{objets booléens.}
+\newcommand{\stSelfDefinition}{l'objet courant.}
+\newcommand{\stSuperDefinition}{l'objet courant dans le contexte de la
+  superclasse.}
+\newcommand{\stThisContextDefinition}{partie de la \emph{pile
+    d'exécution} correspondant à la méthode courante.}
+\newcommand{\stAssignmentOperatorDefinition}{affectation.}
+\newcommand{\stReturnOperatorDefinition}{retour du résultat d'une méthode.}
+\newcommand{\stTempsDeclarationOperatorDefinition}{déclaration de trois variables temporaires.}
+\newcommand{\stDollarOperatorForCharacterADefinition}{le caractère \code{a}.}
+\newcommand{\stDotOperatorDefinition}{termine toute expression.}
+\newcommand{\stSemiColonOperatorDefinition}{cascade de messages.}
+\newcommand{\stBlockOperatorDefinition}{bloc de code (c'est un objet !).}
+
+\newcommand{\stCommentTerm}{commentaire}
+\newcommand{\stStringTerm}{chaîne de caractères}
+
+\newcommand{\stAndTerm}{et}
+
+%%% Local Variables:
+%%% coding: utf-8-unix
+%%% mode: latex
+%%% TeX-master: flyer
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "francais"
+%%% End:

@@ -1,0 +1,216 @@
+\newcommand{\stSmalltalkSubtitle}
+{a programming language\\
+  purely \textbf{object oriented}\\
+  and a \textbf{dynamic} environment}
+
+\newcommand{\stSmalltalkConceptsTerm}{Smalltalk important concepts}
+\newcommand{\stSmalltalkConceptsDefinition} {Smalltalk is an
+  \emph{object oriented} language, \emph{dynamically types}, with a
+minimal syntax which can be learnt in \emph{fifteen minutes}.
+It's main advantage comes from the fact that it is \emph{very coherent}:
+
+\begin{itemize}
+\item everything is an object: classes, methods, numbers, etc.
+\item a really small amount of rules and no exception.
+\end{itemize}
+
+Smalltalk runs thanks to a \emph{virtual machine}.  The development
+happens in an \emph{image} in which all objects live and can be
+modified.}
+
+\newcommand{\stSmalltalkSyntaxTerm}{Smalltalk syntax}
+\newcommand{\stReservedWordsTerm}{Reserved words}
+\newcommand{\stReservedCaractersTerm}{Reserved characters}
+
+\newcommand{\stMessageSendingTerm}{Message sending}
+\newcommand{\stMessageSendingDefinition}
+{A method call is done with a message send. The message is based on a natural language, with a subject, a verb and complements.
+All message send return an object. All messages are sent to an objects, called the message receiver. There exist three message types: unary, binray and keyword.}
+
+\newcommand{\stUnaryMessagesTerm}{Unary messages.}
+\newcommand{\stUnaryMessagesDefinition}
+{A unary message does not have any argument.
+
+\begin{displaycode}
+array := Array new.
+
+array size.             ==> 0
+\end{displaycode}
+
+The first example creates and returns a new instance of the Array
+class, sending it the message \code{new}. The second example asks for
+the size of the array which returns \code{0}.}
+
+\newcommand{\stBinaryMessagesTerm}{Binary messages.}
+\newcommand{\stBinaryMessagesDefinition} {A binary message takes only
+  one argument, is named by a symbol and is often used for arithmetic
+  expressions.
+
+\begin{displaycode}
+3 + 4.                ==> 7
+
+'Hello', ' World'.    ==> 'Hello World'
+\end{displaycode}
+
+The \code{+} message is sent to the object \code{3} with \code{4} as a parameter. In the second case, the message \code{,} is sent to the string \code{'Hello'} with \code{' World'} as a parameter.}
+
+\newcommand{\stKeywordMessagesTerm}{Keyword messages.}
+\newcommand{\stKeywordMessagesDefinition}
+{
+  A keyword message can take one or more arguments. The arguments are inserted between each keyword, after each semicolon.
+
+\begin{displaycode}
+'Smalltalk' allButFirst: 5.    ==> 'talk'
+
+3 to: 10 by: 2. ==> Interval with 3,5,7 and 9
+\end{displaycode}
+
+The first example call the method \code{allButFirst:} on a string and
+pass the argument \code{5}. The method returns the string
+\code{'talk'}. The second example returns a collection containing
+elements \code{3}, \code{5}, \code{7} and \code{9}.
+}
+
+\newcommand{\stDevelopmentEnvironmentTerm}{Development environment}
+\newcommand{\stDevelopmentEnvironmentDefinition} {Most of the
+  Smalltalk implementations comes with an integrated development
+  environment which allows for browsing the source code and
+  interacting with the objects. A lots of tools are available, all
+  implemented in Smalltalk thanks to a reflection API:
+
+\begin{itemize}
+\item a class and method browser;
+\item refactoring tools;
+\item object inspectors;
+\item a debugger;
+\item etc.
+\end{itemize}
+
+The environment permits the code evaluation by a simple keystroke,
+immediately viewing the result.  }
+
+\newcommand{\stImplementationTerm}{Implementations}
+\newcommand{\stImplementationDefinition}
+{
+There exist different Smalltalk implementations:
+\begin{description}
+\item[Squeak] : free, open-source and multi-platform
+  implementation. Actively developed by an international community.
+\item[Visual Works] : proprietary and multi-platform, freely available
+  for a non commercial use.
+\item[Gemstone] : proprietary implementation which includes an highly
+  efficient object database.
+\item[And others] : GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
+\end{description}
+}
+
+\newcommand{\stSqueakCodeBrowserTerm}{The Squeak code browser}
+
+\newcommand{\stApplicationsTerm}{Applications}
+\newcommand{\stApplicationsDefinition}
+{
+\begin{description}
+\item[Teaching] : EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
+\item[Multimedia] : Sophie, OpenCroquet, Plopp\dots
+\item[Web development] : Seaside, Aida, Komanche, Swazoo\dots
+\item[Persistence management] : object oriented databases (Magma, GemStone), relational databases (MySQL, PostgreSQL), object relational mapping (Glorp).
+\end{description}
+}
+
+\newcommand{\stPloppDrawingSessionTerm}{A Plopp drawing session}
+
+\newcommand{\stImageTerm}{Image}
+\newcommand{\stImageDefinition}
+{The Smalltalk environment contains a persistent object store, the
+  image. It contains application code (classes and methods), objects
+  constituting application state and can even include the development
+  environment to inspect and debug the program while it is executing.}
+
+\newcommand{\stVMTerm}{Virtual Machine}
+\newcommand{\stVMDefinition}
+{A virtual machine is a program which is capable of executing other
+  programs. It eases application portability.}
+
+\newcommand{\stReflexionTerm}{Reflexion}
+\newcommand{\stReflexionDefinition} {A language is said reflexive when
+  it contains mechanisms to inspect and modify code during a program
+  execution.}
+
+\newcommand{\stDynamicTypingTerm}{Dynamic typing}
+\newcommand{\stDynamicTypingDefinition} {Some languages are forcing
+  the developer to indicate the type of each variable (integer,
+  string\dots). This is called static typing. With dynamic typing, the
+  developer does not limit its variables to a given type.}
+
+\newcommand{\stBooksTerm}{Books}
+\newcommand{\stBooksDefinition}
+{
+\begin{itemize}
+\item Numerous free books:\\
+  \url{http://stephane.ducasse.free.fr/Books.html}
+
+\item Smalltalk in general
+  \begin{itemize}
+  \item \emph{Smalltalk with Style}\\
+		(Edward Klimas, Suzanne Skublics and
+    David A. Thomas, free)
+  \item \emph{Smalltalk by Example: the Developer's Guide} --
+		(Alec Sharp, free)
+  \end{itemize}
+
+\item Squeak in particular
+  \begin{itemize}
+  \item \emph{Squeak by Example} -- (2007, free)
+  \item \emph{Powerful Ideas in the Classroom}\\
+		(BJ Allen-Conn and Kim Rose)
+  \end{itemize}
+\end{itemize}
+}
+
+\newcommand{\stSmalltalkActionsTerm}{Actions}
+\newcommand{\stSmalltalkActionsDefinition}
+{
+\begin{itemize}
+\item European Smalltalk User Group conferences (ESUG). Since 1993, industrial and academic Smalltalkers meet in an European country.\\
+  \url{http://www.esug.org/conferences}
+\item Annual conference, organised in North America by the STIC, an association with industrial actors and Smalltalk editors.\\
+  \url{http://www.smalltalksolutions.com/}
+\end{itemize}
+}
+
+\newcommand{\stInternetWebsitesDefinition}
+{
+\begin{itemize}
+\item Official Squeak website:\\ \url{http://www.squeak.org}
+\item Wiki:\\ \url{http://wiki.squeak.org}
+\end{itemize}
+}
+
+\newcommand{\stNilDefinition}{undefined object (default variable values).}
+\newcommand{\stTrueAndFalseDefinition}{boolean objects.}
+\newcommand{\stSelfDefinition}{current object.}
+\newcommand{\stSuperDefinition}{current object in the superclass context.}
+\newcommand{\stThisContextDefinition}{run-time stack of the current method.}
+\newcommand{\stAssignmentOperatorDefinition}{assignment.}
+\newcommand{\stReturnOperatorDefinition}{return a result from a method.}
+\newcommand{\stTempsDeclarationOperatorDefinition}{declaration of three  temporary variables.}
+\newcommand{\stDollarOperatorForCharacterADefinition}{character \code{a}.}
+\newcommand{\stLiteralArrayDefinition}{array containing two literals \code{\#abc} and \code{123}.}
+\newcommand{\stDotOperatorDefinition}{terminate expressions.}
+\newcommand{\stSemiColonOperatorDefinition}{message cascade.}
+\newcommand{\stBlockOperatorDefinition}{code block (it's an object !).}
+
+\newcommand{\stCommentTerm}{comment}
+\newcommand{\stStringTerm}{string}
+
+\newcommand{\stAndTerm}{and}
+\newcommand{\stOrTerm}{or}
+
+
+%%% Local Variables:
+%%% coding: utf-8-unix
+%%% mode: latex
+%%% TeX-master: flyer
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:
