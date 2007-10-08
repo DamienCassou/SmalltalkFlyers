@@ -20,7 +20,7 @@
 \input{language}
 
 % Change that to "english" if you want english text
-\input{english}
+\input{french}
 
 \makeatletter
 \newsavebox{\code@box}
@@ -37,7 +37,7 @@
 }
 %\let\code\texttt
 % Use of english prevents babel from adding spaces before $:
-\newcommand{\code}[1]{\foreignlanguage{english}{\texte{#1}}}
+\newcommand{\code}[1]{\foreignlanguage{english}{\texttt{#1}}}
 \makeatother
 
 \graphicspath{{figures/}} 
