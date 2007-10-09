@@ -5,13 +5,13 @@
 
 \newcommand{\stSmalltalkConceptsTerm}{Smalltalk important concepts}
 \newcommand{\stSmalltalkConceptsDefinition} {Smalltalk is an
-  \emph{object oriented} language, \emph{dynamically types}, with a
+  \emph{object oriented} language, \emph{dynamically typed}, with a
 minimal syntax which can be learnt in \emph{fifteen minutes}.
-It's main advantage comes from the fact that it is \emph{very coherent}:
+Its main advantage comes from the fact that it is \emph{very coherent}:
 
 \begin{itemize}
 \item everything is an object: classes, methods, numbers, etc.
-\item a really small amount of rules and no exception.
+\item a really small number of rules and no exception.
 \end{itemize}
 
 Smalltalk runs thanks to a \emph{virtual machine}.  The development
@@ -25,7 +25,7 @@ modified.}
 \newcommand{\stMessageSendingTerm}{Message sending}
 \newcommand{\stMessageSendingDefinition}
 {A method call is done with a message send. The message is based on a natural language, with a subject, a verb and complements.
-All message send return an object. All messages are sent to an objects, called the message receiver. There exist three message types: unary, binary and keyword.}
+All message sends return an object. All messages are sent to objects, called the message receiver. There exist three message types: unary, binary and keyword.}
 
 \newcommand{\stUnaryMessagesTerm}{Unary messages.}
 \newcommand{\stUnaryMessagesDefinition}
@@ -65,7 +65,7 @@ The \code{+} message is sent to the object \code{3} with \code{4} as a parameter
 3 to: 10 by: 2. ==> Interval with 3,5,7 and 9
 \end{displaycode}
 
-The first example call the method \code{allButFirst:} on a string and
+The first example calls the method \code{allButFirst:} on a string and
 pass the argument \code{5}. The method returns the string
 \code{'talk'}. The second example returns a collection containing
 elements \code{3}, \code{5}, \code{7} and \code{9}.
@@ -73,7 +73,7 @@ elements \code{3}, \code{5}, \code{7} and \code{9}.
 
 \newcommand{\stDevelopmentEnvironmentTerm}{Development environment}
 \newcommand{\stDevelopmentEnvironmentDefinition} {Most of the
-  Smalltalk implementations comes with an integrated development
+  Smalltalk implementations come with an integrated development
   environment which allows for browsing the source code and
   interacting with the objects. A lots of tools are available, all
   implemented in Smalltalk thanks to a reflection API:
@@ -86,8 +86,8 @@ elements \code{3}, \code{5}, \code{7} and \code{9}.
 \item etc.
 \end{itemize}
 
-The environment permits the code evaluation by a simple keystroke,
-immediately viewing the result.  }
+The environment permits code evaluation by a simple keystroke,
+immediately showing the result.  }
 
 \newcommand{\stImplementationTerm}{Implementations}
 \newcommand{\stImplementationDefinition}
@@ -97,7 +97,7 @@ There exist different Smalltalk implementations:
 \item[Squeak] : free, open-source and multi-platform
   implementation. Actively developed by an international community.
 \item[Visual Works] : proprietary and multi-platform, freely available
-  for a non commercial use.
+  for non commercial use.
 \item[Gemstone] : proprietary implementation which includes an highly
   efficient object database.
 \item[And others] : GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
@@ -122,7 +122,7 @@ There exist different Smalltalk implementations:
 \newcommand{\stImageTerm}{Image}
 \newcommand{\stImageDefinition}
 {The Smalltalk environment contains a persistent object store, the
-  image. It contains application code (classes and methods), objects
+  image. This contains application code (classes and methods), objects
   constituting application state and can even include the development
   environment to inspect and debug the program while it is executing.}
 
@@ -131,16 +131,16 @@ There exist different Smalltalk implementations:
 {A virtual machine is a program which is capable of executing other
   programs. It eases application portability.}
 
-\newcommand{\stReflexionTerm}{Reflexion}
-\newcommand{\stReflexionDefinition} {A language is said reflexive when
+\newcommand{\stReflexionTerm}{Reflection}
+\newcommand{\stReflexionDefinition} {A language is said to be reflective when
   it contains mechanisms to inspect and modify code during a program
   execution.}
 
 \newcommand{\stDynamicTypingTerm}{Dynamic typing}
-\newcommand{\stDynamicTypingDefinition} {Some languages are forcing
+\newcommand{\stDynamicTypingDefinition} {Some languages force
   the developer to indicate the type of each variable (integer,
   string\dots). This is called static typing. With dynamic typing, the
-  developer does not limit its variables to a given type.}
+  developer does not limit the variables to a given type.}
 
 \newcommand{\stBooksTerm}{Books}
 \newcommand{\stBooksDefinition}
@@ -167,13 +167,13 @@ There exist different Smalltalk implementations:
 \end{itemize}
 }
 
-\newcommand{\stSmalltalkActionsTerm}{Actions}
+\newcommand{\stSmalltalkActionsTerm}{Events}
 \newcommand{\stSmalltalkActionsDefinition}
 {
 \begin{itemize}
 \item European Smalltalk User Group conferences (ESUG). Since 1993, industrial and academic Smalltalkers meet in an European country.\\
   \url{http://www.esug.org/conferences}
-\item Annual conference, organised in North America by the STIC, an association with industrial actors and Smalltalk editors.\\
+\item Annual conference, organised in North America by the STIC (\url{http://www.stic.st}), an association with industrial actors and Smalltalk editors.\\
   \url{http://www.smalltalksolutions.com/}
 \end{itemize}
 }
@@ -183,6 +183,7 @@ There exist different Smalltalk implementations:
 \begin{itemize}
 \item Official Squeak website:\\ \url{http://www.squeak.org}
 \item Wiki:\\ \url{http://wiki.squeak.org}
+\item News:\\ \url{http://news.squeak.org}
 \end{itemize}
 }
 
