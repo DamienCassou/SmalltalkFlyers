@@ -5,17 +5,17 @@
 
 \newcommand{\stSmalltalkConceptsTerm}{Smalltalk important concepts}
 \newcommand{\stSmalltalkConceptsDefinition} {Smalltalk is an
-  \emph{object oriented} language, \emph{dynamically typed}, with a
-minimal syntax which can be learnt in \emph{fifteen minutes}.
-Its main advantage comes from the fact that it is \emph{very coherent}:
+  \emph{object-oriented}, \emph{dynamically-typed} language, with a
+simple syntax which can be learnt in \emph{fifteen minutes}.
+Its main advantage comes from the fact that it is \emph{very consistent}:
 
 \begin{itemize}
 \item everything is an object: classes, methods, numbers, etc.
-\item a really small number of rules and no exception.
+\item a small number of rules, and no exceptions!
 \end{itemize}
 
-Smalltalk runs thanks to a \emph{virtual machine}.  The development
-happens in an \emph{image} in which all objects live and can be
+Smalltalk runs in a \emph{virtual machine}.  Development
+takes place in an \emph{image} in which all objects live and are 
 modified.}
 
 \newcommand{\stSmalltalkSyntaxTerm}{Smalltalk syntax}
@@ -24,12 +24,12 @@ modified.}
 
 \newcommand{\stMessageSendingTerm}{Message sending}
 \newcommand{\stMessageSendingDefinition}
-{A method call is done with a message send. The message is based on a natural language, with a subject, a verb and complements.
-All message sends return an object. All messages are sent to objects, called the message receiver. There exist three message types: unary, binary and keyword.}
+{A method is called by sending a message to an object, the message receiver; the message returns an object. The message is based on natural language, having a subject, a verb and complements.
+There are three message types: unary, binary and keyword.}
 
 \newcommand{\stUnaryMessagesTerm}{Unary messages.}
 \newcommand{\stUnaryMessagesDefinition}
-{A unary message does not have any argument.
+{A unary message is one with no arguments.
 
 \begin{displaycode}
 array := Array new.
@@ -38,8 +38,8 @@ array size.             ==> 0
 \end{displaycode}
 
 The first example creates and returns a new instance of the Array
-class, sending it the message \code{new}. The second example asks for
-the size of the array which returns \code{0}.}
+class, by sending it the message \code{new}. The second example asks for
+the size of this array which returns \code{0}.}
 
 \newcommand{\stBinaryMessagesTerm}{Binary messages.}
 \newcommand{\stBinaryMessagesDefinition}{A binary message takes only
@@ -72,10 +72,10 @@ elements \code{3}, \code{5}, \code{7} and \code{9}.
 }
 
 \newcommand{\stDevelopmentEnvironmentTerm}{Development environment}
-\newcommand{\stDevelopmentEnvironmentDefinition} {Most of the
+\newcommand{\stDevelopmentEnvironmentDefinition} {Most 
   Smalltalk implementations come with an integrated development
-  environment which allows for browsing the source code and
-  interacting with the objects. A lots of tools are available, all
+  environment that allows you to browse the source code and
+  to interact with objects. Lots of tools are available, all
   implemented in Smalltalk thanks to a reflection API:
 
 \begin{itemize}
@@ -83,16 +83,16 @@ elements \code{3}, \code{5}, \code{7} and \code{9}.
 \item refactoring tools;
 \item object inspectors;
 \item a debugger;
-\item etc.
+\item release management and version control tools;
+\item and much, much more!
 \end{itemize}
 
-The environment permits code evaluation by a simple keystroke,
-immediately showing the result.  }
+Code can be inspected and evaluated directly in the image, using simple key combinations and full menus.  }
 
 \newcommand{\stImplementationTerm}{Implementations}
 \newcommand{\stImplementationDefinition}
 {
-There exist different Smalltalk implementations:
+There are a number of Smalltalk implementations available:
 \begin{description}
 \item[Squeak] : free, open-source and multi-platform
   implementation. Actively developed by an international community.
@@ -109,6 +109,9 @@ There exist different Smalltalk implementations:
 \newcommand{\stApplicationsTerm}{Applications}
 \newcommand{\stApplicationsDefinition}
 {
+Since its creation in the early 1980s, Smalltalk has been widely used in 
+academic research as well as in commercial applications.  Here are some current Smalltalk
+applications that are advancing the state of software.
 \begin{description}
 \item[Teaching] : EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
 \item[Multimedia] : Sophie, OpenCroquet, Plopp\dots
@@ -123,8 +126,8 @@ There exist different Smalltalk implementations:
 \newcommand{\stImageDefinition}
 {The Smalltalk environment contains a persistent object store, the
   image. This contains application code (classes and methods), objects
-  constituting application state and can even include the development
-  environment to inspect and debug the program while it is executing.}
+  holding application state and can even include the development
+  tools to inspect and debug the program while it is executing.}
 
 \newcommand{\stVMTerm}{Virtual Machine}
 \newcommand{\stVMDefinition}
@@ -139,8 +142,8 @@ There exist different Smalltalk implementations:
 \newcommand{\stDynamicTypingTerm}{Dynamic typing}
 \newcommand{\stDynamicTypingDefinition} {Some languages force
   the developer to indicate the type of each variable (integer,
-  string\dots). This is called static typing. With dynamic typing, the
-  developer does not limit the variables to a given type.}
+  string\dots); this is called static typing. Dynamic typing
+does not impose this constraint, and so makes programs more reusable and easier to change.}
 
 \newcommand{\stBooksTerm}{Books}
 \newcommand{\stBooksDefinition}
