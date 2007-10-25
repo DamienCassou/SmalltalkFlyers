@@ -34,7 +34,7 @@ There are three message types: unary, binary and keyword.}
 \begin{displaycode}
 array := Array new.
 
-array size.             ==> 0
+array size.
 \end{displaycode}
 
 The first example creates and returns a new instance of the Array
@@ -47,9 +47,9 @@ the size of this array which returns \code{0}.}
   expressions.
 
 \begin{displaycode}
-3 + 4.                ==> 7
+3 + 4.
 
-'Hello', ' World'.    ==> 'Hello World'
+'Hello', ' World'.
 \end{displaycode}
 
 The \code{+} message is sent to the object \code{3} with \code{4} as a parameter. In the second case, the message \code{,} is sent to the string \code{'Hello'} with \code{' World'} as a parameter.}
@@ -60,9 +60,9 @@ The \code{+} message is sent to the object \code{3} with \code{4} as a parameter
   A keyword message can take one or more arguments. The arguments are inserted between each keyword, after each colon.
 
 \begin{displaycode}
-'Smalltalk' allButFirst: 5.    ==> 'talk'
+'Smalltalk' allButFirst: 5.
 
-3 to: 10 by: 2. ==> Interval with 3,5,7 and 9
+3 to: 10 by: 2.
 \end{displaycode}
 
 The first example calls the method \code{allButFirst:} on a string and
