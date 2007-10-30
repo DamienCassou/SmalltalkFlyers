@@ -15,8 +15,9 @@
 
 % You can add your babel package after english:
 \usepackage[english]{babel} %%@@LANG@@
-\usepackage{color, graphicx}
-\usepackage{alltt}
+\usepackage{color,graphicx}
+\usepackage{tabularx,booktabs}
+\usepackage{alltt,textcomp}
 \usepackage{url}
 \usepackage{ifthen}
 \usepackage{xspace}
@@ -44,7 +45,7 @@
 \newcommand{\code}[1]{\foreignlanguage{english}{\texttt{#1}}}
 \makeatother
 
-\graphicspath{{figures/}} 
+\graphicspath{{figures/}}
 
 \title{
 	\vfill
@@ -78,29 +79,35 @@
 \stSmalltalkConceptsDefinition
 
 \subsection{\stSmalltalkSyntaxTerm}
-\paragraph{\stReservedWordsTerm}
-\begin{description}
-\stWordDefinition{Nil}
-\stWordDefinition{TrueAndFalse}
-\stWordDefinition{Self}
-\stWordDefinition{Super}
-\stWordDefinition{ThisContext}
-\end{description}
+% \paragraph{\stReservedWordsTerm}\ 
 
-\paragraph{\stReservedCaractersTerm}
+\noindent
+\begin{tabularx}{\linewidth}{@{}rX@{}}
+	\toprule
+	\multicolumn{2}{l}{\stReservedWordsTerm}\\
+	\midrule
+	\code{nil} & \stNilDefinition\\
+	\code{true} \stAndTerm{} \code{false} & \stTrueAndFalseDefinition\\
+	\code{self} & \stSelfDefinition\\
+	\code{super} & \stSuperDefinition\\
+	\code{thisContext} & \stThisContextDefinition\\
+	\addlinespace
 
-\begin{description}
-\item[:=] (\stOrTerm $\leftarrow$):  \stAssignmentOperatorDefinition
-\item[\^{}] (\stOrTerm $\uparrow$): \stReturnOperatorDefinition
-\item[$\mid$ var1 var2 var3 $\mid$]: \stTempsDeclarationOperatorDefinition
-\item[\$a]: \stDollarOperatorForCharacterADefinition
-\item[\#(abc 123)]: \stLiteralArrayDefinition
-\item[.]: \stDotOperatorDefinition
-\item[;]: \stSemiColonOperatorDefinition
-\item[[ ]]: \stBlockOperatorDefinition
-\item["\stCommentTerm"].
-\item['\stStringTerm'].
-\end{description}
+	\toprule
+	\multicolumn{2}{l}{\stReservedCaractersTerm}\\
+	\midrule
+	\code{:=} (\stOrTerm{} \code{\textleftarrow}) & \stAssignmentOperatorDefinition \\
+	\code{\^} (\stOrTerm{} \code{\textuparrow}) & \stReturnOperatorDefinition \\
+	\code{|} var1 var2 var3 \code{|} & \stTempsDeclarationOperatorDefinition \\
+	\code{\$a} & \stDollarOperatorForCharacterADefinition \\
+	\code{\#(abc 123)} & \stLiteralArrayDefinition \\
+	\code{.} (\stPeriodTerm) & \stDotOperatorDefinition \\
+	\code{;} & \stSemiColonOperatorDefinition \\
+	\code{[ ]} & \stBlockOperatorDefinition \\
+	\code{"}\stCommentTerm\code{"} & \\
+	\code{'}\stStringTerm\code{'} & \\
+	\bottomrule
+\end{tabularx}
 
 \pagebreak{}
 
