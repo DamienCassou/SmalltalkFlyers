@@ -12,7 +12,7 @@
 \renewcommand{\rmdefault}{iwonac}
 \renewcommand{\bfdefault}{b}
 \usepackage{microtype}
-\usepackage[french, english]{babel}
+\usepackage[english, french, german]{babel}
 \usepackage{color, graphicx}
 \usepackage{alltt}
 \usepackage{url}
@@ -20,8 +20,8 @@
 
 \input{language}
 
-% Change that to "english" if you want english text
-\input{french}
+% Change that to english, german or french
+\input{english} %%
 
 \makeatletter
 \newsavebox{\code@box}
@@ -65,6 +65,7 @@
 % }}
 
 \begin{document}
+\stBeforeAnyText
 \maketitle
 \thispagestyle{empty}
 
@@ -164,6 +165,7 @@
 
 \stInternetWebsitesDefinition
 
+\stAfterAnyText
 \end{document}  
 
 %%% Local Variables:

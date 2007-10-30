@@ -1,0 +1,228 @@
+\newcommand{\stSmalltalkSubtitle}
+{
+  純粋な {\em オブジェクト指向}で\\
+  　{\em 動的な}環境の\\
+  プログラミング言語
+  }
+
+\newcommand{\stSmalltalkConceptsTerm}{Smalltalkの重要な概念}
+\newcommand{\stSmalltalkConceptsDefinition} {Smalltalk は、
+  \emph{オブジェクト指向} であり、 \emph{動的に型付けされている}、
+  主な文法は\emph{15分}で学習可能な言語です。
+  これは、\emph{一貫性に関する}以下の事実からきています。
+
+\begin{itemize}
+\item 全てはオブジェクト: クラスもメソッドも数も、なにもかも
+\item 規則の数はとても少なく、規則の例外はありません
+\end{itemize}
+
+Smalltalk は、\emph{仮想マシン}を使って実行します。
+開発は、全ての生きたオブジェクトが含まれ、変更可能な\emph{イメージ}に対して行われます。
+}
+
+\newcommand{\stSmalltalkSyntaxTerm}{Smalltalkの文法}
+\newcommand{\stReservedWordsTerm}{予約語}
+\newcommand{\stReservedCaractersTerm}{予約された文字}
+
+\newcommand{\stMessageSendingTerm}{メッセージの送信}
+\newcommand{\stMessageSendingDefinition}
+{
+メソッド呼び出しは、メッセージを送信することによって行われます。
+メッセージ送信の記法は自然言語に基づいており、主語と動詞、および補語から成り立っ
+ています。
+全てのメッセージは、メッセージレシーバと呼ばれるオブジェクトに送られ、オブジェクトを返します。
+メッセージには、単項, 二項, キーワードの3種類があります。 
+}
+
+\newcommand{\stUnaryMessagesTerm}{単項メッセージ}
+\newcommand{\stUnaryMessagesDefinition}
+{単項メッセージは引数を取りません。
+
+\begin{displaycode}
+array := Array new.
+
+array size.             ==> 0
+\end{displaycode}
+
+最初の例は、\code{new}メッセージを送信することで、 配列(Array)クラスの新しいインスタンスを作成し、このインスタンスを返します。
+2番目の例では、このarrayの大きさを尋ね、\code{0}が返ってきます。}
+
+\newcommand{\stBinaryMessagesTerm}{二項メッセージ}
+\newcommand{\stBinaryMessagesDefinition}{
+二項メッセージは、引数を一つだけ取ります。
+メッセージ名にはシンボルが使われ、算術式などに使われます。
+
+\begin{displaycode}
+3 + 4.                ==> 7
+
+'Hello', ' World'.    ==> 'Hello World'
+\end{displaycode}
+
+\code{+}メッセージがオブジェクト\code{3}に引数\code{4}で送られます。
+後の例では、\code{,}メッセージが文字列\code{'Hello'}に引数\code{' World'}で送られます。}
+
+\newcommand{\stKeywordMessagesTerm}{キーワードメッセージ}
+\newcommand{\stKeywordMessagesDefinition}
+{
+キーワードメッセージは、引数を1つ以上取ります。
+引数は、コロンで終わるキーワードの後に書きます。
+
+\begin{displaycode}
+'Smalltalk' allButFirst: 5.    ==> 'talk'
+
+3 to: 10 by: 2. ==> Interval型で、値は 3,5,7,9
+\end{displaycode}
+
+最初の例は、文字列の\code{allButFirst:}メソッドを引数\code{5}で呼び出します。
+メソッドは、文字列\code{'talk'}を返します。
+2番目の例は、要素が\code{3}, \code{5}, \code{7} ,\code{9}のコレクションを返します。
+}
+
+\newcommand{\stDevelopmentEnvironmentTerm}{開発環境}
+\newcommand{\stDevelopmentEnvironmentDefinition} {
+Smalltalkの多くは、ソースコードをブラウズしたり、
+オブジェクトを扱ったりできる統合開発環境(IDE)と一緒に提供されます。
+SmalltalkのリフレクションAPIを使って実装された以下のようなたくさんのツールが利用できます。
+
+\begin{itemize}
+\item クラスやメソッドブラウザ
+\item リファクタリングツール
+\item オブジェクトインスペクタ
+\item デバッガ
+\item などなど
+\end{itemize}
+
+この様な環境は簡単なキーストロークでコードの評価ができ、
+すぐにその結果を見ることができます。}
+
+\newcommand{\stImplementationTerm}{実装}
+\newcommand{\stImplementationDefinition}
+{
+いくつかの異なるSmalltalk実装があります。
+\begin{description}
+\item[Squeak] : フリーで、オープンソース、マルチプラットフォームな実装です。
+  国際的なコミュニティによって、活発に開発されています。
+\item[Visual Works] : プロプライエタリで、マルチプラットフォーム、商用利用しない個人は自由に入手可能です。
+\item[Gemstone] : プロプライエタリ実装で、とても高性能なオブジェクトデータベースを含みます。
+\item[その他] : GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
+\end{description}
+}
+
+\newcommand{\stSqueakCodeBrowserTerm}{Squeakコードブラウザ}
+
+\newcommand{\stApplicationsTerm}{アプリケーション}
+\newcommand{\stApplicationsDefinition}
+{
+\begin{description}
+\item[教育] : EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
+\item[マルチメディア] : Sophie, OpenCroquet, Plopp\dots
+\item[Web開発] : Seaside, Aida, Komanche, Swazoo\dots
+\item[永続性の管理] : オブジェクト指向データベース (Magma, GemStone), 関連データベース (MySQL, PostgreSQL), オブジェクト関連マップ (Glorp).
+\end{description}
+}
+
+\newcommand{\stPloppDrawingSessionTerm}{Ploppでのお絵描き}
+
+\newcommand{\stImageTerm}{イメージ}
+\newcommand{\stImageDefinition}
+{Smalltalk環境には、イメージと呼ばれる、システム内での全オブジェクトを永続的に保存できるしくみがあります。
+イメージは、(クラスやメソッドなどの)オブジェクトとして抽象化したアプリケーションのコードと、状態を含みます。
+さらに、プログラムの調査やデバッグを行うために使われる開発環境も含まれています。
+}
+
+\newcommand{\stVMTerm}{仮想マシン}
+\newcommand{\stVMDefinition}
+{仮想マシンは別のプログラムを実行する能力のあるプログラムです。
+仮想マシンを使うことで、アプリケーションの移植性を高めるのが容易となります。}
+
+\newcommand{\stReflexionTerm}{リフレクション}
+\newcommand{\stReflexionDefinition} {
+言語がリフレクション能力を持つというのは、プログラムの実行中にコードを調べたり、変更したりする機構があることをいいます。
+}
+
+\newcommand{\stDynamicTypingTerm}{動的な型付け}
+\newcommand{\stDynamicTypingDefinition} {
+言語の中には、開発者が(整数型や文字列型などの)変数の型を指定するものがあります。
+このような言語は、静的に型付けされているといわれます。
+動的な型付けでは、開発者は変数にどんな型の値を入れても構いません。}
+
+\newcommand{\stBooksTerm}{書籍}
+\newcommand{\stBooksDefinition}
+{
+\begin{itemize}
+\item たくさんのフリーの本一覧:\\
+  \url{http://stephane.ducasse.free.fr/Books.html}
+\item Smalltalk全般
+  \begin{itemize}
+  \item \emph{Smalltalk with Style}\\
+		(Edward Klimas, Suzanne Skublics and
+    David A. Thomas, free)
+  \item \emph{Smalltalk by Example: the Developer's Guide} --
+		(Alec Sharp, free)
+  \end{itemize}
+
+\item Squeak
+  \begin{itemize}
+  \item \emph{Squeak by Example} -- (2007, free)
+  \item \emph{Powerful Ideas in the Classroom}\\
+		(BJ Allen-Conn and Kim Rose)
+  \item \emph{自由自在Squeakプログラミング}\\
+    (梅澤真史, ISBN:4-88373-203-7, 2004)
+  \item \emph{スクイークであそぼう}\\
+    (Thoru Yamamoto,ISBN:4-7981-0480-9, 2003)
+  \end{itemize}
+\end{itemize}
+}
+
+\newcommand{\stSmalltalkActionsTerm}{活動}
+\newcommand{\stSmalltalkActionsDefinition}
+{
+\begin{itemize}
+\item European Smalltalk User Group conferences (ESUG). 1993年から活動を開始しました。企業や教育組織のSmalltalker(Smalltalk利用者)がヨーロッパの国で会合を行なっています。\\
+  \url{http://www.esug.org/conferences}
+\item
+年に1度のカンファレンスが、企業やSmalltalk開発者の協会であるSTIC(\url{http://www.stic.st})の主催で、北米で開かれます。\\
+  \url{http://www.smalltalksolutions.com/}
+\end{itemize}
+}
+
+\newcommand{\stInternetWebsitesDefinition}
+{
+\begin{itemize}
+\item Squeak公式website: \url{http://www.squeak.org}
+\item 日本のSqueakの拠点: \url{http://www.squeakland.jp}
+\item Wiki: \url{http://wiki.squeak.org}
+\item ニュース: \url{http://news.squeak.org}
+\end{itemize}
+}
+
+\newcommand{\stNilDefinition}{未定義オブジェクト (変数のデフォルト値)}
+\newcommand{\stTrueAndFalseDefinition}{ブール値オブジェクト}
+\newcommand{\stSelfDefinition}{現在のオブジェクト}
+\newcommand{\stSuperDefinition}{スーパクラスコンテキストでの現在のオブジェクト}
+\newcommand{\stThisContextDefinition}{現在のメソッドの実行時スタック}
+\newcommand{\stAssignmentOperatorDefinition}{代入}
+\newcommand{\stReturnOperatorDefinition}{メソッドからの結果を返す}
+\newcommand{\stTempsDeclarationOperatorDefinition}{3つの一時変数の定義}
+\newcommand{\stDollarOperatorForCharacterADefinition}{文字 \code{a}.}
+\newcommand{\stLiteralArrayDefinition}{二つのリテラル\code{\#abc} と \code{123}を含む配列}
+\newcommand{\stDotOperatorDefinition}{式の終了}
+\newcommand{\stSemiColonOperatorDefinition}{メッセージのカスケード}
+\newcommand{\stBlockOperatorDefinition}{コードブロック(これもオブジェクトです!)}
+
+\newcommand{\stCommentTerm}{コメント}
+\newcommand{\stStringTerm}{文字列}
+
+\newcommand{\stGlossaryTerm}{用語集}
+
+\newcommand{\stAndTerm}{と}
+\newcommand{\stOrTerm}{または}
+
+
+%%% Local Variables:
+%%% coding: utf-8-unix
+%%% mode: latex
+%%% TeX-master: flyer
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:
