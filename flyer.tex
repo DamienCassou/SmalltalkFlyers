@@ -12,7 +12,9 @@
 \renewcommand{\rmdefault}{iwonac}
 \renewcommand{\bfdefault}{b}
 \usepackage{microtype}
-\usepackage[english,@@LANG@@]{babel}
+
+% You can add your babel package after english:
+\usepackage[english]{babel} %%@@LANG@@
 \usepackage{color, graphicx}
 \usepackage{alltt}
 \usepackage{url}
@@ -21,8 +23,8 @@
 
 \input{language}
 
-% Change that to english, german or french
-\input{@@LANG@@} %%
+% You can replace english by the language you want
+\input{english} %%@@LANG@@
 
 \makeatletter
 \newsavebox{\code@box}
