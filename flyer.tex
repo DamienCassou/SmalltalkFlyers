@@ -12,7 +12,7 @@
 \renewcommand{\rmdefault}{iwonac}
 \renewcommand{\bfdefault}{b}
 \usepackage{microtype}
-\usepackage[english, french, german]{babel}
+\usepackage[english,@@LANG@@]{babel}
 \usepackage{color, graphicx}
 \usepackage{alltt}
 \usepackage{url}
@@ -22,7 +22,7 @@
 \input{language}
 
 % Change that to english, german or french
-\input{german} %%
+\input{@@LANG@@} %%
 
 \makeatletter
 \newsavebox{\code@box}
@@ -66,7 +66,6 @@
 % }}
 
 \begin{document}
-\stBeforeAnyText
 \maketitle
 \thispagestyle{empty}
 
@@ -166,7 +165,6 @@
 
 \stInternetWebsitesDefinition
 
-\stAfterAnyText
 \end{document}  
 
 %%% Local Variables:
