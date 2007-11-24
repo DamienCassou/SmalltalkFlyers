@@ -23,10 +23,11 @@
 \usepackage{xspace}
 
 \input{language}
-\input{smalltalk-header}
 
 % You can replace english by the language you want
-\input{english} %%@@LANG@@
+\input{languages/english} %%@@LANG@@
+
+\input{flyer-definitions/smalltalk-header}
 
 \makeatletter
 \newsavebox{\code@box}
@@ -70,7 +71,7 @@
 
 \pagebreak{}
 
-\input{smalltalk}
+\input{flyer-definitions/smalltalk-body}
 
 \end{document}  
 
