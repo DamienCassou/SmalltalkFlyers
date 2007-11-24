@@ -14,7 +14,7 @@
 \usepackage{microtype}
 
 % You can add your babel package after english:
-\usepackage[english,spanish]{babel} %%@@LANG@@
+\usepackage[english,english]{babel} %%@@LANG@@
 \usepackage{color,graphicx}
 \usepackage{tabularx,booktabs}
 \usepackage{alltt,textcomp}
@@ -23,9 +23,10 @@
 \usepackage{xspace}
 
 \input{language}
+\input{smalltalk-header}
 
 % You can replace english by the language you want
-\input{spanish} %%@@LANG@@
+\input{english} %%@@LANG@@
 
 \makeatletter
 \newsavebox{\code@box}
@@ -49,24 +50,19 @@
 
 \title{
 	\vfill
-	\resizebox{\linewidth}{!}{\fontfamily{iwonac}\selectfont Smalltalk}%
+	\resizebox{\linewidth}{!}{\fontfamily{iwonac}\selectfont \stTitle}%
 	\\[\baselineskip]
 	\normalfont
-        \stSmalltalkSubtitle
+        \stSubtitle
         \\
 	\vfill
-	\includegraphics[width=\textwidth]{esug}
+        \stFlyerLogo
 }
 
 \date{}
+
 \CutLine*{1} \CutLine*{2} \CutLine*{3} \CutLine*{4} \CutLine*{5}
 \CutLine*{6}
-
-
-% \AddToBackground*{2}{% Background of a large page
-%   \put(\LenToUnit{.25\paperwidth},\LenToUnit{.4\paperheight}){%
-%     \includegraphics[width=14.85cm]{esug-background}
-% }}
 
 \begin{document}
 \maketitle
@@ -74,105 +70,7 @@
 
 \pagebreak{}
 
-\section{\stSmalltalkConceptsTerm}
-
-\stSmalltalkConceptsDefinition
-
-\subsection{\stSmalltalkSyntaxTerm}
-% \paragraph{\stReservedWordsTerm}\ 
-
-\noindent
-\begin{tabularx}{\linewidth}{@{}rX@{}}
-	\toprule
-	\multicolumn{2}{l}{\stReservedWordsTerm}\\
-	\midrule
-	\code{nil} & \stNilDefinition\\
-	\code{true} \stAndTerm{} \code{false} & \stTrueAndFalseDefinition\\
-	\code{self} & \stSelfDefinition\\
-	\code{super} & \stSuperDefinition\\
-	\code{thisContext} & \stThisContextDefinition\\
-	\addlinespace
-
-	\toprule
-	\multicolumn{2}{l}{\stReservedCaractersTerm}\\
-	\midrule
-	\code{:=} (\stOrTerm{} \code{\textleftarrow}) & \stAssignmentOperatorDefinition \\
-	\code{\^} (\stOrTerm{} \code{\textuparrow}) & \stReturnOperatorDefinition \\
-	\code{|} var1 var2 var3 \code{|} & \stTempsDeclarationOperatorDefinition \\
-	\code{\$a} & \stDollarOperatorForCharacterADefinition \\
-	\code{\#(abc 123)} & \stLiteralArrayDefinition \\
-	\code{.} (\stPeriodTerm) & \stDotOperatorDefinition \\
-	\code{;} & \stSemiColonOperatorDefinition \\
-	\code{[ ]} & \stBlockOperatorDefinition \\
-	\code{"}\stCommentTerm\code{"} & \\
-	\code{'}\stStringTerm\code{'} & \\
-	\bottomrule
-\end{tabularx}
-
-\pagebreak{}
-
-\subsection{\stMessageSendingTerm}
-
-\stMessageSendingDefinition
-
-\paragraph{\stUnaryMessagesTerm}
-
-\stUnaryMessagesDefinition
-
-\paragraph{\stBinaryMessagesTerm}
-
-\stBinaryMessagesDefinition
-
-\paragraph{\stKeywordMessagesTerm}
-
-\stKeywordMessagesDefinition
-
-\pagebreak{}
-
-\section{\stDevelopmentEnvironmentTerm}
-
-\stDevelopmentEnvironmentDefinition
-
-\begin{center}
-  \includegraphics[width=.75\textwidth]{squeak}\\
-  \stSqueakCodeBrowserTerm
-\end{center}
-
-\section{\stImplementationTerm}
-
-\stImplementationDefinition
-
-\pagebreak{}
-
-\section{\stApplicationsTerm}
-
-\stApplicationsDefinition
-
-\begin{center}
-  \includegraphics[width=.45\textwidth]{plopp}\\
-  \stPloppDrawingSessionTerm
-\end{center}
-
-\begin{stGlossary}
-\stWordDefinition{Image}
-\stWordDefinition{VM}
-\stWordDefinition{Reflexion}
-\stWordDefinition{DynamicTyping}
-\end{stGlossary}
-
-\pagebreak{}
-
-\section{\stBooksTerm}
-
-\stBooksDefinition
-
-\section{\stSmalltalkActionsTerm}
-
-\stSmalltalkActionsDefinition
-
-\section{Internet}
-
-\stInternetWebsitesDefinition
+\input{smalltalk}
 
 \end{document}  
 
@@ -181,5 +79,5 @@
 %%% mode: latex
 %%% TeX-master: t
 %%% TeX-PDF-mode: t
-%%% ispell-local-dictionary: "francais"
+%%% ispell-local-dictionary: "english"
 %%% End:
