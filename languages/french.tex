@@ -217,7 +217,7 @@ Il existe différentes implémentations de Smalltalk :
 \newcommand{\stThisContextDefinition}{partie de la \emph{pile d'exécution} correspondant à la méthode courante}
 \newcommand{\stAssignmentOperatorDefinition}{affectation}
 \newcommand{\stReturnOperatorDefinition}{retour du résultat d'une méthode}
-\newcommand{\stTempsDeclarationOperatorDefinition}{déclaration de trois variables temporaires}
+\newcommand{\stTempsDeclarationOperatorDefinition}{déclaration de variables temporaires}
 \newcommand{\stDollarOperatorForCharacterADefinition}{le caractère \code{a}}
 \newcommand{\stLiteralArrayDefinition}{tableau contenant deux littéraux : le symbole \code{\#abc} et le nombre \code{123}}
 \newcommand{\stDotOperatorDefinition}{termine toute expression}
@@ -232,10 +232,34 @@ Il existe différentes implémentations de Smalltalk :
 
 \newcommand{\stAndTerm}{et}
 \newcommand{\stOrTerm}{or}
+
+\newcommand{\stBlockTerm}{Bloc}
+\newcommand{\stBlockDefinition}{
+
+  Les blocs sont utilisés pour délimiter une séquence d'instructions
+  paramétrées dont l'évaluation est différée. Ils peuvent aussi être
+  vus comme des fonctions anonymes avec ou sans argument.
+
+    \begin{displaycode}
+\#('Hello ' 'World')
+
+\hspace{1cm}  do: [:string | Transcript show: string].
+    \end{displaycode}
+
+     Dans cet exemple, le message \code{do:} est envoyé à un tableau de
+     chaînes de caractères avec un bloc en paramètre. Le bloc est
+     évalué une fois pour chaque élément du tableau. Le paramètre
+     \code{string} du bloc contient chaque élément du tableau, l'un
+     après l'autre. Le résultat de l'expression complète est
+    l'affichage des chaînes \code{'Hello '} puis \code{'World'} dans
+     le transcript.
+
+}
+
 %%% Local Variables:
 %%% coding: utf-8-unix
 %%% mode: latex
-%%% TeX-master: flyer
+%%% TeX-master: "../flyer"
 %%% TeX-PDF-mode: t
 %%% ispell-local-dictionary: "francais"
 %%% End:

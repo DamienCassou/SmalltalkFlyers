@@ -1,13 +1,16 @@
 #! /bin/bash
 
-for language in english french german spanish; do
-	sed \
-	    -e 's/^\\input{.*} %%@@LANG@@$/\\input{languages\/'$language'}/' \
-	    -e 's/^\\usepackage\[.*\]{babel} %%@@LANG@@$/\\usepackage[english,'$language']{babel}/' \
-	    flyer.tex > smalltalk-flyer-$language.tex
-	pdflatex smalltalk-flyer-$language.tex \
-		&& pdflatex smalltalk-flyer-$language.tex
-	rm -f smalltalk-flyer-$language.{tex,aux,log}
-done
+# The parameter is a language (french, english...)
+function compile() {
+    language="$1"
+    sed \
+	-e 's/^\\input{.*} %%@@LANG@@$/\\input{languages\/'$language'}/' \
+	-e 's/^\\usepackage\[.*\]{babel} %%@@LANG@@$/\\usepackage[english,'$language']{babel}/' \
+	flyer.tex > smalltalk-flyer-$language.tex
 
-echo 'put -f smalltalk-flyer*.pdf' | yafc free
+    pdflatex smalltalk-flyer-$language.tex \
+	&& pdflatex smalltalk-flyer-$language.tex
+    rm -f smalltalk-flyer-$language.{tex,aux,log}
+}
+
+compile "$1"

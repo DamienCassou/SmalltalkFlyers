@@ -198,7 +198,7 @@ no impone esta restricción, por lo que contribuye a una mayor reusabilidad y a 
 \newcommand{\stThisContextDefinition}{objeto contexto de ejecución del método actual}
 \newcommand{\stAssignmentOperatorDefinition}{asignación}
 \newcommand{\stReturnOperatorDefinition}{devuelve el resultado de un método}
-\newcommand{\stTempsDeclarationOperatorDefinition}{declaración de tres variables temporales}
+\newcommand{\stTempsDeclarationOperatorDefinition}{declaración de variables temporales}
 \newcommand{\stDollarOperatorForCharacterADefinition}{caracter \code{a}}
 \newcommand{\stLiteralArrayDefinition}{arreglo con literales: el símbolo \code{\#abc} y el número \code{123}}
 \newcommand{\stDotOperatorDefinition}{fin de expresión}
@@ -213,6 +213,29 @@ no impone esta restricción, por lo que contribuye a una mayor reusabilidad y a 
 
 \newcommand{\stAndTerm}{y}
 \newcommand{\stOrTerm}{o}
+
+
+\newcommand{\stBlockTerm}{Block - MISSING TRANSLATION}
+\newcommand{\stBlockDefinition}{
+
+  Block are used to delimit a sequence of parametrized instructions
+  for which evaluation is deferred. They can also be seen as anonymous
+  functions with or without arguments.
+
+  \begin{displaycode}
+    \#('Hello ' 'World')
+
+    \hspace{1cm}  do: [:string | Transcript show: string].
+  \end{displaycode}
+
+  The example sends the message \code{do:} to an array of strings with
+  a block as a parameter. The block is evaluated once for each element
+  in the array. The block parameter \code{string} contains each
+  element of the array, one after the other. As a result of the whole
+  expression, the strings \code{'Hello '} then \code{'World'} are
+  displayed in the transcript.
+   
+}
 
 
 %%% Local Variables:
