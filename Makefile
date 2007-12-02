@@ -1,3 +1,5 @@
+languages: french english spanish german
+
 french: 
 	./make-flyers.sh french
 
