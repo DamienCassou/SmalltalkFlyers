@@ -187,35 +187,30 @@ Mit dynamischer Typisierung limitiert man Variablen nicht auf einen gegebenen Ty
 \newcommand{\stOrTerm}{oder}
 
 
-\newcommand{\stBlockTerm}{Blöcke - MISSING TRANSLATION -}
+\newcommand{\stBlockTerm}{Blöcke}
 \newcommand{\stBlockDefinition}{
 
-  Blocks are objects containing code that is not executed immediately.
-  They are the basis for control structures like conditionals or
-  loops.  %Also, blocks can be used to attach behavior to menu items.
-  
-%   OR:
-
-%   Blöcke umschließen Anweisungen, deren Ausführung verzögert wird. Sie
-%   können auch als anonyme Funktionen mit oder ohne Parametern gesehen
-%   werden.
+  Blöcke sind Objekte, die Code enthalten, der nicht sofort ausgeführt
+  wird. Mit ihnen werden bedingte oder wiederholte Ausführung
+  implementiert, und man kann damit das Verhalten z.B. von
+  Menüeinträgen festlegen.
 
   \begin{displaycode}
-    \#('Hello ' 'World')
+    \#('Hallo ' Welt')
 
     \hspace{1cm}  do: [:string | Transcript show: string].
   \end{displaycode}
 
-  The example sends the message \code{do:} to an array of strings with
-  a block as a parameter. The block is evaluated once for each element
-  in the array. The block parameter \code{string} contains each
-  element of the array, one after the other. As a result of the whole
-  expression, the strings \code{'Hello '} then \code{'World'} are
-  displayed in the transcript.
+  Dieses Beispiel schickt die Nachricht \code{do:} an ein Feld von
+  Zeichenketten und übergibt dabei einen Block. Dieser Block wird von
+  \code{do:} mit jedem Feldelement ausgeführt, das dann innerhalb des
+  Blocks im Parameter \code{wort} zur Verfügung steht. Als Ergebnis
+  werden nacheinander die Worte \code{'Hallo '} und \code{'Welt'} im
+  Transkriptfenster ausgegeben.
    
 }
 
-\newcommand{\stSqueakCodeBrowserSize}{.65}
+\newcommand{\stSqueakCodeBrowserSize}{.55}
 
 
 %%% Local Variables:
