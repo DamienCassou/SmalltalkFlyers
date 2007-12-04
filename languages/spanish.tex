@@ -215,26 +215,27 @@ no impone esta restricción, por lo que contribuye a una mayor reusabilidad y a 
 \newcommand{\stOrTerm}{o}
 
 
-\newcommand{\stBlockTerm}{Block - MISSING TRANSLATION}
+\newcommand{\stBlockTerm}{Bloques}
 \newcommand{\stBlockDefinition}{
 
-  Block are used to delimit a sequence of parametrized instructions
-  for which evaluation is deferred. They can also be seen as anonymous
-  functions with or without arguments.
+  Los bloques se utilizan para delimitar una secuencia parametrizada
+  de instrucciones que se evaluarán diferidamente. También se los
+  puede ver como funciones anónimas con o sin argumentos.
+
 
   \begin{displaycode}
-    \#('Hello ' 'World')
+    \#('Holla ' 'Mundo')
 
     \hspace{1cm}  do: [:string | Transcript show: string].
   \end{displaycode}
 
-  The example sends the message \code{do:} to an array of strings with
-  a block as a parameter. The block is evaluated once for each element
-  in the array. The block parameter \code{string} contains each
-  element of the array, one after the other. As a result of the whole
-  expression, the strings \code{'Hello '} then \code{'World'} are
-  displayed in the transcript.
-   
+  El ejemplo envía el mensaje \code{do:} a un array de strings con un
+  bloque como parámetro. El bloque se evalúa una vez por cada elemento
+  del array. El parámetro del bloque, \code{string}, contiene cada
+  elemento del array, uno a la vez. Como resultado de toda la
+  expresión se muestran en el trascript los strings \code{'Hola '} y
+  luego \code{'Mundo'}.
+
 }
 
 \newcommand{\stSqueakCodeBrowserSize}{0.1}
