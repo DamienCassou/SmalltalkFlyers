@@ -39,7 +39,7 @@ array size.
 Das erste Beispiel erzeugt eine neue Instanz von \code{Array}, indem es die un\"are Nachricht \code{new} an die \emph{Klasse} \code{Array} sendet. Das zweite Beispiel liefert die Gr\"o{\ss}e dieses leeren Arrays, also \code{0}.}
 
 \newcommand{\stBinaryMessagesTerm}{Bin\"are Nachrichten.}
-\newcommand{\stBinaryMessagesDefinition}{Eine bin\"are Nachricht hat nur ein Argument, wird durch ein Symbol bezeichnet und oft f\"ur arithmetische Ausdr\"ucke verwandt.
+\newcommand{\stBinaryMessagesDefinition}{Eine bin\"are Nachricht hat nur ein Argument, wird durch ein Symbol bezeichnet und oft f\"ur arithmetische Ausdr\"ucke verwendet.
 
 \begin{displaycode}
 3 + 4.
@@ -62,7 +62,7 @@ Das erste Beispiel ruft die Methode \code{allButFirst:} mit dem Parameter \code{
 Das zweite Beispiel ruft die Methode \code{to:by:} mit den Parametern \code{10} und \code{2} zwischen den Sch\"usselw\"ortern \code{to:} und \code{by:} auf der Integerzahl \code{3} auf.}
 
 \newcommand{\stDevelopmentEnvironmentTerm}{Entwicklungsumgebung}
-\newcommand{\stDevelopmentEnvironmentDefinition} {Die meisten Smalltalk-Implementierungen beinhalten eine Entwicklungsumgebung, die es erlaubt, im Source-Code zu browsen oder mit Objekten zu interagieren. Diese Umgebungen beinhalten viele Werkzeuge, die alle in Smalltalk selbst implementiert sind:
+\newcommand{\stDevelopmentEnvironmentDefinition} {Die meisten Smalltalk-Implementierungen beinhalten eine Entwicklungsumgebung, die es erlaubt, im Source-Code zu navigieren und mit Objekten zu interagieren. Diese Umgebungen beinhalten viele Werkzeuge, die alle in Smalltalk selbst implementiert sind:
 \begin{itemize}
 \item ein Klassen- und Methodenbrowser;
 \item Refactoring Werkzeuge;
@@ -190,24 +190,21 @@ Mit dynamischer Typisierung limitiert man Variablen nicht auf einen gegebenen Ty
 \newcommand{\stBlockTerm}{Blöcke}
 \newcommand{\stBlockDefinition}{
 
-  Blöcke sind Objekte, die Code enthalten, der nicht sofort ausgeführt
-  wird. Mit ihnen werden bedingte oder wiederholte Ausführung
-  implementiert, und man kann damit das Verhalten z.B. von
-  Menüeinträgen festlegen.
+  Blöcke sind Code in eckigen Klammern, der nicht sofort ausgeführt
+  wird, sondern bedingt, wiederholt oder später.
 
   \begin{displaycode}
-    \#('Hallo ' Welt')
+     \#('Hallo ' 'Welt')
 
-    \hspace{1cm}  do: [:string | Transcript show: string].
-  \end{displaycode}
+     \hspace{1cm} do: [:wort | Transcript show: wort].
+   \end{displaycode}
 
-  Dieses Beispiel schickt die Nachricht \code{do:} an ein Feld von
-  Zeichenketten und übergibt dabei einen Block. Dieser Block wird von
-  \code{do:} mit jedem Feldelement ausgeführt, das dann innerhalb des
-  Blocks im Parameter \code{wort} zur Verfügung steht. Als Ergebnis
-  werden nacheinander die Worte \code{'Hallo '} und \code{'Welt'} im
-  Transkriptfenster ausgegeben.
-   
+   Dieses Beispiel schickt die Nachricht \code{do:} an ein Feld
+   von Zeichenketten und übergibt dabei einen Block. Die
+   Methode \code{do:} führt den Block mit jedem Feldelement aus,
+   das als  Parameter \code{wort} übergeben wird und nacheinander
+   \code{'Hallo '} und \code{'Welt'} ausgibt.
+
 }
 
 \newcommand{\stSqueakCodeBrowserSize}{.55}
