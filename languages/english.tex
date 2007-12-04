@@ -216,9 +216,10 @@ does not impose this constraint, and so makes programs more reusable and easier 
 \newcommand{\stBlockTerm}{Block}
 \newcommand{\stBlockDefinition}{
 
-  Block are used to delimit a sequence of parametrized instructions
-  for which evaluation is deferred. They can also be seen as anonymous
-  functions with or without arguments.
+  Blocks are objects containing code that is not executed immediately.
+  They are the basis for control structures like conditionals or
+  loops.  Also, blocks can be used to attach behavior, e.g., to menu
+  items.
 
   \begin{displaycode}
     \#('Hello ' 'World')
