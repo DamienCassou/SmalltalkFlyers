@@ -4,7 +4,7 @@
   und \textbf{dynamische} Entwicklungsumgebung}
 
 \newcommand{\stSmalltalkConceptsTerm}{Wichtige Konzepte von Smalltalk}
-\newcommand{\stSmalltalkConceptsDefinition} {Squeak ist ein Smalltalk Dialekt. Smalltalk ist eine
+\newcommand{\stSmalltalkConceptsDefinition} {Squeak ist ein Smalltalk-Dialekt. Smalltalk ist eine
   \emph{objektorientierte} Sprache, \emph{dynamisch typisiert}, mit einer
 minimalen Syntax, die in \emph{f\"unfzehn Minuten} gelernt werden kann.
 Ein wesentlicher Vorteil der Smalltalk-Sprache ist ihre \emph{Koh\"arenz}:
@@ -17,7 +17,7 @@ Ein wesentlicher Vorteil der Smalltalk-Sprache ist ihre \emph{Koh\"arenz}:
 Smalltalk l\"auft auf einer \emph{virtuellen Maschine}.  Die Entwicklung
 erfolgt in einem \emph{Image}, in dem alle Objekte ``leben'' und modifiziert werden k\"onnen.}
 
-\newcommand{\stSmalltalkSyntaxTerm}{Smalltalk Syntax}
+\newcommand{\stSmalltalkSyntaxTerm}{Smalltalk-Syntax}
 \newcommand{\stReservedWordsTerm}{Reservierte W\"orter}
 \newcommand{\stReservedCaractersTerm}{Reservierte Zeichen}
 
@@ -47,7 +47,7 @@ Das erste Beispiel erzeugt eine neue Instanz von \code{Array}, indem es die un\"
 'Hello', ' World'.
 \end{displaycode}
 
-Die \code{+} Nachricht wird an das Objekt \code{3} mit \code{4} als Parameter geschickt. Im zweiten Fall wird die Nachricht \code{,} an den String \code{'Hello'} mit \code{' World'} als Parameter geschickt.}
+Die Nachricht \code{+} wird an das Objekt \code{3} mit \code{4} als Parameter geschickt. Im zweiten Fall wird die Nachricht \code{,} an den String \code{'Hello'} mit \code{' World'} als Parameter geschickt.}
 
 \newcommand{\stKeywordMessagesTerm}{Schl\"usselwort-Nachrichten.}
 \newcommand{\stKeywordMessagesDefinition}
@@ -65,7 +65,7 @@ Das zweite Beispiel ruft die Methode \code{to:by:} mit den Parametern \code{10} 
 \newcommand{\stDevelopmentEnvironmentDefinition} {Die meisten Smalltalk-Implementierungen beinhalten eine Entwicklungsumgebung, die es erlaubt, im Source-Code zu navigieren und mit Objekten zu interagieren. Diese Umgebungen beinhalten viele Werkzeuge, die alle in Smalltalk selbst implementiert sind:
 \begin{itemize}
 \item ein Klassen- und Methodenbrowser;
-\item Refactoring Werkzeuge;
+\item Refactoring-Werkzeuge;
 \item Objekt-Inspektoren;
 \item Debugger;
 \item etc.
@@ -77,14 +77,14 @@ Die Umgebung erlaubt die direkte Ausf\"uhrung von Code mittels der Tastatur und 
 {
 Es existieren viele Smalltalk-Implementierungen:
 \begin{description}
-\item[Squeak:] frei und plattformunabh\"angig. Entwickelt von einer aktiven internationalen Gemeinschaft.
-\item[Visual Works:] kommerziell und plattformunabh\"angig, frei f\"ur nicht-kommerzielle Nutzung.
+\item[Squeak:] frei verf\"ugbar und plattformunabh\"angig. Entwickelt von einer aktiven internationalen Gemeinschaft.
+\item[Visual Works:] kommerziell und plattformunabh\"angig, frei verf\"ugbar f\"ur nicht-kommerzielle Nutzung.
 \item[Gemstone:] hochperformante Objektdatenbank. GLASS (Gemstone, Linux, Apache, Seaside, Smalltalk).
 \item[Und andere:] GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
 \end{description}
 }
 
-\newcommand{\stSqueakCodeBrowserTerm}{Der Squeak Code-Browser}
+\newcommand{\stSqueakCodeBrowserTerm}{Der Squeak-Code-Browser}
 
 \newcommand{\stApplicationsTerm}{Anwendungen}
 \newcommand{\stApplicationsDefinition}
@@ -93,7 +93,7 @@ Es existieren viele Smalltalk-Implementierungen:
 \item[Lehre:] EToys (Squeak), SqueakBot, BotsInc, Scratch \dots
 \item[Multimedia:] Sophie, OpenCroquet, Plopp \dots
 \item[Web Entwicklung:] Seaside, Aida, Komanche, Swazoo \dots
-\item[Persistenz:] Objektorientierte Datenbanken (Magma, GemStone), Relationale Datenbanken (MySQL, PostgreSQL), Objektrelationales Mapping (Glorp ..).
+\item[Persistenz:] Objektorientierte Datenbanken (Magma, GemStone), Relationale Datenbanken (MySQL, PostgreSQL), Objektrelationales Mapping (Glorp).
 \end{description}
 }
 
@@ -101,11 +101,11 @@ Es existieren viele Smalltalk-Implementierungen:
 
 \newcommand{\stImageTerm}{Image}
 \newcommand{\stImageDefinition}
-{Die Smalltalk Umgebung beinhaltet einen persistenten Objektspeicher, das Image. Im Image werden alle Klassen- und Methoden-Objekte des Systems und somit sein gesamter Source-Code gespeichtert, aber auch der aktuelle Zustand aller Werkzeug-Objekte wie Klassenbrowser, Inspektoren oder Debugger.}
+{Die Smalltalk-Umgebung beinhaltet einen persistenten Objektspeicher, das Image. Im Image werden alle Klassen- und Methoden-Objekte des Systems und somit sein gesamter Source-Code gespeichtert, aber auch der aktuelle Zustand aller Werkzeug-Objekte wie Klassenbrowser, Inspektoren oder Debugger.}
 
 \newcommand{\stVMTerm}{Virtuelle Maschine}
 \newcommand{\stVMDefinition}
-{Eine virtuelle Maschine ist ein Programm, das f\"ahig ist, andere Programme auszuf\"uhren und erleichtert damit die Portabilit\"at von Anwendungen.}
+{Eine virtuelle Maschine ist ein Programm, das f\"ahig ist, andere Programme auszuf\"uhren und damit die Portabilit\"at von Anwendungen erleichtert.}
 
 \newcommand{\stReflexionTerm}{Reflektion}
 \newcommand{\stReflexionDefinition} {Eine Sprache nennt man reflektiv, wenn sie Mechanismen beinhaltet, mit deren Hilfe man Code zur Laufzeit betrachten und \"andern kann.}
@@ -119,21 +119,21 @@ Mit dynamischer Typisierung limitiert man Variablen nicht auf einen gegebenen Ty
 \newcommand{\stBooksDefinition}
 {
 \begin{itemize}
-\item Eine Vielzahl von freien B\"uchern:\\
+\item Eine Vielzahl von frei verf\"ugbarenen B\"uchern:\\
   \url{http://stephane.ducasse.free.fr/Books.html}
 
 \item Smalltalk im Allgemeinen
   \begin{itemize}
   \item \emph{Smalltalk with Style}\\
 		(Edward Klimas, Suzanne Skublics and
-    David A. Thomas, frei)
+    David A. Thomas, frei verf\"ugbar)
   \item \emph{Smalltalk by Example: the Developer's Guide} --
-		(Alec Sharp, frei)
+		(Alec Sharp, frei verf\"ugbar)
   \end{itemize}
 
 \item Squeak im Besonderen
   \begin{itemize}
-  \item \emph{Squeak by Example} -- (2007, frei)
+  \item \emph{Squeak by Example} -- (2007, frei verf\"ugbar)
   \item \emph{Powerful Ideas in the Classroom}\\
 		(BJ Allen-Conn und Kim Rose)
   \end{itemize}
@@ -144,7 +144,7 @@ Mit dynamischer Typisierung limitiert man Variablen nicht auf einen gegebenen Ty
 \newcommand{\stSmalltalkActionsDefinition}
 {
 \begin{itemize}
-\item European Smalltalk User Group Konferenzen (ESUG). Seit 1993, industrielle und akademische Smalltalker treffen sich in einem europ\"aischen Land.\\
+\item Konferenzen der European Smalltalk User Group (ESUG). Seit 1993, industrielle und akademische Smalltalker treffen sich in einem europ\"aischen Land.\\
   \url{http://www.esug.org/conferences}
 \item J\"ahrliche Konferenz in Nord-Amerika, organisiert vom STIC (\url{http://www.stic.st})\\
 \url{http://www.smalltalksolutions.com/}
@@ -154,8 +154,8 @@ Mit dynamischer Typisierung limitiert man Variablen nicht auf einen gegebenen Ty
 \newcommand{\stInternetWebsitesDefinition}
 {
 \begin{itemize}
-\item Offizielle Squeak Website:\\ \url{http://www.squeak.org}
-\item Etoys: \\ \url{http://www.squeakland.org}
+\item Offizielle Squeak-Website:\\ \url{http://www.squeak.org}
+\item EToys: \\ \url{http://www.squeakland.org}
 \item Seaside:\\ \url{http://www.seaside.st}
 \item Wiki:\\ \url{http://wiki.squeak.org}
 \item News:\\ \url{http://news.squeak.org}
@@ -164,18 +164,18 @@ Mit dynamischer Typisierung limitiert man Variablen nicht auf einen gegebenen Ty
 }
 
 \newcommand{\stNilDefinition}{Undefiniertes Objekt}
-\newcommand{\stTrueAndFalseDefinition}{Boolsche Objekte}
+\newcommand{\stTrueAndFalseDefinition}{Boolesche Objekte}
 \newcommand{\stSelfDefinition}{Aktuelles Objekt}
 \newcommand{\stSuperDefinition}{Aktuelles Objekt im Kontext der Superklasse}
-\newcommand{\stThisContextDefinition}{Laufzeit Stack der aktuellen Methode}
+\newcommand{\stThisContextDefinition}{Laufzeit-Stack der aktuellen Methode}
 \newcommand{\stAssignmentOperatorDefinition}{Zuweisung}
 \newcommand{\stReturnOperatorDefinition}{Ergebnisr\"uckgabe}
 \newcommand{\stTempsDeclarationOperatorDefinition}{Deklaration dreier  tempor\"arer Variablen}
 \newcommand{\stDollarOperatorForCharacterADefinition}{Zeichen \code{a}}
 \newcommand{\stLiteralArrayDefinition}{Array mit zwei Literalen \code{\#abc} und \code{123}}
 \newcommand{\stDotOperatorDefinition}{Stoppzeichen eines Ausdrucks}
-\newcommand{\stSemiColonOperatorDefinition}{Nachrichten Kaskadierung}
-\newcommand{\stBlockOperatorDefinition}{Code Block (auch ein Objekt!)}
+\newcommand{\stSemiColonOperatorDefinition}{Nachrichten-Kaskadierung}
+\newcommand{\stBlockOperatorDefinition}{Code-Block (auch ein Objekt!)}
 
 \newcommand{\stPeriodTerm}{punkt}
 \newcommand{\stCommentTerm}{Kommentar}
