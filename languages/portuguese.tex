@@ -1,0 +1,253 @@
+\newcommand{\stSmalltalkSubtitle}
+{uma linguagem de programação\\
+  puramente \textbf{orientada a objetos}\\
+  e um ambiente \textbf{dinâmico}}
+
+\newcommand{\stSmalltalkConceptsTerm}{Conceitos importantes de Smalltalk}
+\newcommand{\stSmalltalkConceptsDefinition} {Smalltalk é uma linguagem
+  \emph{orientada a objetos}, \emph{dinamicamente tipada}, com uma
+  sintaxe simples que pode ser aprendida em \emph{quinze minutos}.
+Sua maior vantagem vem do fato de ser \emph{muito consistente}:
+
+\begin{itemize}
+\item tudo é um objeto: classes, métodos, números, etc.
+\item um pequeno número de regras, sem excessões!
+\end{itemize}
+
+Smalltalk roda numa \emph{máquina virtual}.  O desenvolvimento
+acontece numa \emph{imagem} na qual todos os objetos vivem e são
+modificados.}
+
+\newcommand{\stSmalltalkSyntaxTerm}{A syntaxe do Smalltalk}
+\newcommand{\stReservedWordsTerm}{Palavras reservadas}
+\newcommand{\stReservedCaractersTerm}{Caracteres reservados}
+
+\newcommand{\stMessageSendingTerm}{Envio de mensagens}
+\newcommand{\stMessageSendingDefinition}
+{Um método é chamado pelo envio de uma mensagem a um objeto, o receptor da mensagem; a mensagem retorna um objeto. A mensagem é baseada em linguagem natural, tem um sujeito, um verbo e complementos.
+Existem três tipos de mensagem: unária, binária e palavra-chave.}
+
+\newcommand{\stUnaryMessagesTerm}{Mensagens unárias.}
+\newcommand{\stUnaryMessagesDefinition}
+{Uma mensagem unária não tem argumentos.
+
+\begin{displaycode}
+array := Array new.
+
+array size.
+\end{displaycode}
+
+O primeiro exemplo cria e retorna uma nova instancia da classe Array
+ao lhe enviar a mensagem \code{new}. O segundo exemplo pede o tamanho
+desta, o que retorna \code{0}.}
+
+\newcommand{\stBinaryMessagesTerm}{Mensagens binárias.}
+\newcommand{\stBinaryMessagesDefinition}{Uma mensagem binária recebe apenas
+  um argumento, é chamada por um símbolo e normalmente é usada para
+  expressões matemáticas.
+
+\begin{displaycode}
+3 + 4.
+
+'Hello', ' World'.
+\end{displaycode}
+
+A mensagem \code{+} é enviada para o objeto \code{3} tendo \code{4} como par\^ametro. No segundo caso a mensagem \code{,} é envidada para a cadeia de caracteres \code{'Hello'} tendo \code{' World'} como par\^ametro.}
+
+\newcommand{\stKeywordMessagesTerm}{Mensagens de palavra-chave.}
+\newcommand{\stKeywordMessagesDefinition}
+{
+  Uma mensagem de palavra-chave pode receber um ou mais argumentos. Os argumentos são inseridos entre cada palavra-chave, depois dos dois pontos.
+
+\begin{displaycode}
+'Smalltalk' allButFirst: 5.
+
+3 to: 10 by: 2.
+\end{displaycode}
+
+O primeiro exemplo chama o método \code{allButFirst:} numa cadeia de caracteres e
+passa o argumento \code{5}. O método retorna a cadeia de caracteres
+\code{'talk'}. O segundo exemplo retorna uma coleção contendo
+os elementos \code{3}, \code{5}, \code{7} e \code{9}.
+}
+
+\newcommand{\stDevelopmentEnvironmentTerm}{Ambiente de desenvolvimento}
+\newcommand{\stDevelopmentEnvironmentDefinition} {A maioria das
+  implementações de Smalltalk vem com um ambiente de desenvolvimento
+  integrado que permite que você navegue no código-fonte e
+  interaja com os objetos. Muitas ferramentas estão disponíveis, todas
+  implementadas em Smalltalk graças a uma API de reflexão computacional:
+
+\begin{itemize}
+\item um navegador de classe e método;
+\item ferramentas de refatoração;
+\item inspetores de objetos;
+\item um depurador;
+\item ferramentas de controle de releases e controle de versão;
+\item e muito, muito mais!
+\end{itemize}
+
+O código pode ser inspecionado e avaliado diretamente na imagem, usando simples combinações de teclas e opções de menus.  }
+
+\newcommand{\stImplementationTerm}{Implementações}
+\newcommand{\stImplementationDefinition}
+{
+Existem várias implementações de Smalltalk disponíveis:
+\begin{description}
+\item[Squeak:] implementação gratuita, de código aberto e
+  multi-plataforma. Desenvolvida ativamente por uma comunidade internacional.
+\item[Visual Works:] proprietaria e multi-plataforma, disponível gratuitamente
+  para uso não-comercial.
+\item[Gemstone:] implementação proprietária que inclui um banco de dados
+  altamente eficiente.
+\item[And others:] GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
+\end{description}
+}
+
+\newcommand{\stSqueakCodeBrowserTerm}{O navegador de código do Squeak}
+
+\newcommand{\stApplicationsTerm}{Aplicações}
+\newcommand{\stApplicationsDefinition}
+{
+Desde sua criação no início dos anos 80, Smalltalk tem sido amplamente usado tanto em 
+pesquisa acadêmica com em aplicações comerciais. Aqui estão algumas aplicações em
+Smalltalk atuais que estão evoluindo a tecnologia do software.
+\begin{description}
+\item[Ensino:] EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
+\item[Multimídia:] Sophie, OpenCroquet, Plopp\dots
+\item[Desenvolvimento web:] Seaside, Aida, Komanche, Swazoo\dots
+\item[Persistência:] bancos de dados orientados a objeto (Magma, GemStone), relacionais (MySQL, PostgreSQL) e mapeamentos objeto-relacional (Glorp).
+\end{description}
+}
+
+\newcommand{\stPloppDrawingSessionTerm}{Uma sesso de desenho no Plopp}
+
+\newcommand{\stImageTerm}{Imagem}
+\newcommand{\stImageDefinition}
+{O ambiente do Smalltalk contém um repositório de objetos persistente, a
+  imagem. Esta contém código de aplicações (classes and métodos), objetos
+  contendo o estado das aplicaçães e até inclui as ferramentas de
+  desenvolvimento para inspecionar e depurar o programa enquantoeventos ele está executando.}
+
+\newcommand{\stVMTerm}{Máquina virtual}
+\newcommand{\stVMDefinition}
+{Uma máquina virtual é um programa que é capaz de executar outros
+  programas. Ele facilita a portabilidade de aplicações.}
+
+\newcommand{\stReflexionTerm}{Reflexão computacional}
+\newcommand{\stReflexionDefinition} {Um linguagem é dita reflexiva quando
+  contem mecanismos para inspecionar e modificar o código durante a execução
+  do programa.}
+
+\newcommand{\stDynamicTypingTerm}{Tipagem dinâmica}
+\newcommand{\stDynamicTypingDefinition} {Algumas linguagens forçam
+  o desenvolvedor a indicar o tipo de cada variável (inteiro,
+  cadeia de caracteres\dots); isto é chamado tipagem estática. Tipagem dinâmica
+ não impõe está restrição, o que torna os programas mais reusáveis e fáceis de manter.}
+
+\newcommand{\stBooksTerm}{Livros}
+\newcommand{\stBooksDefinition}
+{
+\begin{itemize}
+\item Vários livros gratuítos:\\
+  \url{http://stephane.ducasse.free.fr/Books.html}
+
+\item Smalltalk em geral
+  \begin{itemize}
+  \item \emph{Smalltalk with Style}\\
+		(Edward Klimas, Suzanne Skublics and
+    David A. Thomas, free)
+  \item \emph{Smalltalk by Example: the Developer's Guide} --
+		(Alec Sharp, free)
+  \end{itemize}
+
+\item Squeak em particular
+  \begin{itemize}
+  \item \emph{Squeak by Example} -- (2007, free)
+  \item \emph{Powerful Ideas in the Classroom}\\
+		(BJ Allen-Conn and Kim Rose)
+  \end{itemize}
+\end{itemize}
+}
+
+\newcommand{\stSmalltalkActionsTerm}{Eventos}
+\newcommand{\stSmalltalkActionsDefinition}
+{
+\begin{itemize}
+\item Confer\^encias do Grupo de Usuários Europeu de Smalltalk (ESUG). Desde 1993, usuários de Smalltalk da industria e da academia se encontram em um país europeu.\\
+  \url{http://www.esug.org/conferences}
+\item Conferência anual, organisada na America do Norte pelo STIC (\url{http://www.stic.st}), uma associação com atores industriais e desenvolvedores de Smalltalk.\\
+  \url{http://www.smalltalksolutions.com/}
+\end{itemize}
+}
+
+\newcommand{\stInternetWebsitesDefinition}
+{
+\begin{itemize}
+\item Official Squeak website:\\ \url{http://www.squeak.org}
+\item Wiki:\\ \url{http://wiki.squeak.org}
+\item News:\\ \url{http://news.squeak.org}
+\end{itemize}
+}
+
+\newcommand{\stNilDefinition}{objeto indefinido (valor inicial das variáveis)}
+\newcommand{\stTrueAndFalseDefinition}{objetos boleanos}
+\newcommand{\stSelfDefinition}{objeto atual}
+\newcommand{\stSuperDefinition}{objeto atual no contexto da superclasse}
+\newcommand{\stThisContextDefinition}{pilha de execução do método atual}
+\newcommand{\stAssignmentOperatorDefinition}{atribuição}
+\newcommand{\stReturnOperatorDefinition}{retorna um resultado dum método}
+\newcommand{\stTempsDeclarationOperatorDefinition}{declaração de três variáveis temporárias}
+\newcommand{\stDollarOperatorForCharacterADefinition}{charactere \code{a}}
+\newcommand{\stLiteralArrayDefinition}{array contendo dois literais: o símbolo \code{\#abc} e o número \code{123}}
+\newcommand{\stDotOperatorDefinition}{fim da expressão}
+\newcommand{\stSemiColonOperatorDefinition}{messagem em cascata}
+\newcommand{\stBlockOperatorDefinition}{bloco de código (é um objeto !)}
+
+\newcommand{\stPeriodTerm}{ponto}
+\newcommand{\stCommentTerm}{comentário}
+\newcommand{\stStringTerm}{cadeia de caracteres}
+
+\newcommand{\stGlossaryTerm}{Glossário}
+
+\newcommand{\stAndTerm}{e}
+\newcommand{\stOrTerm}{ou}
+
+\newcommand{\stBlockTerm}{Bloco}
+\newcommand{\stBlockDefinition}{
+
+  Blocos são objetos contendo código que não é executado imediatamente.
+  Eles são a base das estruturas de controle como condicionais ou
+  laços. Inclusive blocos podem ser usados para acrescentar comportamento, p. ex.,
+  a itens de menu.
+
+  \begin{displaycode}
+    \#('Hello ' 'World')
+
+    \hspace{1cm}  do: [:string | Transcript show: string].
+  \end{displaycode}
+
+  O exemplo envia a mensagem \code{do:} para uma array de cadeia de caracteres com
+  um bloco como par\^ametro. O bloco é avaliado uma vez para cada elemento
+  da array. O par\^ametro do bloco, \code{string}, contém cada
+  elemento da array um após o outro. Como resultado da expressão
+  inteira as cadeias de caracteres \code{'Hello '} e então \code{'World'} são
+  mostradas.
+   
+}
+
+\newcommand{\stSqueakCodeBrowserSize}{0.1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\seaSubtitle}{O framework para desenvolvimento de aplicações web
+  sofisticadas em Smalltalk}
+
+%%% Local Variables:
+%%% coding: utf-8-unix
+%%% mode: latex
+%%% TeX-master: "../flyer"
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:
+

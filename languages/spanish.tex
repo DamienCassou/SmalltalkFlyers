@@ -7,16 +7,16 @@
 \newcommand{\stSmalltalkConceptsDefinition} {Smalltalk es un
 lenguaje \emph{orientado a objetos} y \emph{dinámicamente tipado}, con una
 sintáxis simple que puede ser aprendida en \emph{quince minutos}.
-Su mayor ventaja proviene del hecho que es \emph{muy consistente}:
+Su mayor ventaja es ser \emph{muy consistente}:
 
 \begin{itemize}
 \item todo es un objeto: clases, métodos, números, etc.
 \item una pequeña cantidad de reglas, y ninguna excepción!
 \end{itemize}
 
-Smalltalk corre sobre una \emph{máquina virtual}.  El desarrollo
-se realiza en una \emph{imagen} en donde todos los objetos viven 
-y son modificados.}
+Smalltalk corre sobre una \emph{máquina virtual}.  Se desarrolla 
+sobre una \emph{imagen} donde todos los objetos viven y son 
+modificados.}
 
 \newcommand{\stSmalltalkSyntaxTerm}{Sintaxis de Smalltalk}
 \newcommand{\stReservedWordsTerm}{Palabras reservadas}
@@ -24,7 +24,7 @@ y son modificados.}
 
 \newcommand{\stMessageSendingTerm}{Envío de mensajes}
 \newcommand{\stMessageSendingDefinition}
-{Un método es invocado al enviar un mensaje a un objeto (el receptor del mensaje) y el mensaje devuelve un objeto. El mensaje esta basado en el lenguaje natural, conformado por un sujeto, un verbo y argumentos.
+{Un método es invocado al enviar un mensaje a un objeto (el receptor) y el mensaje devuelve un objeto. El mensaje está basado en el lenguaje natural, conformado por un sujeto, un verbo y argumentos.
 Existen tres tipos de mensajes: unario, binario y de palabra clave.}
 
 \newcommand{\stUnaryMessagesTerm}{Mensajes unarios.}
@@ -52,7 +52,7 @@ el tamaño de ese arreglo y devuelve \code{0}.}
 'Hola', ' Mundo'.
 \end{displaycode}
 
-El mensaje \code{+} es enviado al objeto \code{3} con el objeto \code{4} como parámetro. En el segundo caso, el mensaje \code{,} es enviado a la cadena de caracteres \code{'Hola'} con \code{' Mundo'} como parámetro.}
+El mensaje \code{+} es enviado al objeto \code{3} con \code{4} como parámetro. En el segundo caso, el mensaje \code{,} es enviado al string \code{'Hola'} con \code{' Mundo'} como parámetro.}
 
 \newcommand{\stKeywordMessagesTerm}{Mensajes de palabra clave.}
 \newcommand{\stKeywordMessagesDefinition}
@@ -65,8 +65,8 @@ El mensaje \code{+} es enviado al objeto \code{3} con el objeto \code{4} como pa
 3 to: 10 by: 2.
 \end{displaycode}
 
-El primer ejemplo invoca el método \code{allButFirst:} sobre una cadena de caracteres y
-con el argumento \code{5}. El método devuelve la cadena de caracteres
+El primer ejemplo invoca el método \code{allButFirst:} sobre un string y
+con el argumento \code{5}. El método devuelve el string
 \code{'talk'}. El segundo ejemplo devuelve una colección con los 
 elementos \code{3}, \code{5}, \code{7} y \code{9}.
 }
@@ -74,28 +74,25 @@ elementos \code{3}, \code{5}, \code{7} y \code{9}.
 \newcommand{\stDevelopmentEnvironmentTerm}{Entorno de desarrollo}
 \newcommand{\stDevelopmentEnvironmentDefinition} {La mayoría de
   las implementaciones de Smalltalk proveen un entorno de desarrollo 
-  integrado que permite explorar el código fuente e interactuar 
-  con los objetos. Muchas herramientas estan disponibles, todas
-  implementadas en Smalltalk gracias a su reflexiva API:
-
+  integrado que permite explorar el código fuente e interactuar con objetos. Muchas herramientas implementadas en Smalltalk están disponibles
+  gracias a su API reflexiva:
 \begin{itemize}
 \item browser de clases y de métodos;
 \item herramientas de refactoring;
 \item inspectores de objetos;
 \item un depurador;
-\item herramientas de administración de releases y de control de versiones;
+\item administración de releases y control de versiones;
 \item y mucho, mucho más!
 \end{itemize}
 
-El código puede ser inspeccionado y ejecutado directamente en la imagen, usando combinaciones de teclas simples y opciones de menús.}
+El código puede ser inspeccionado y ejecutado directamente en la imagen, usando combinaciones de teclas y menús.}
 
 \newcommand{\stImplementationTerm}{Implementaciones}
 \newcommand{\stImplementationDefinition}
 {
 Existen varias implementaciones de Smalltalk disponibles:
 \begin{description}
-\item[Squeak:] implementación gratuita, open-source y 
-  multi-plataforma. Desarrollada activamente por una comunidad internacional.
+\item[Squeak:] gratuito, open-source y   multi-plataforma. Desarrollado activamente por una comunidad internacional.
 \item[Visual Works:] implementación proprietaria y multi-plataforma, disponible 
   gratuitamente para uso no comercial.
 \item[Gemstone:] implementación propietaria que incluye una base de objetos 
@@ -207,39 +204,41 @@ no impone esta restricción, por lo que contribuye a una mayor reusabilidad y a 
 
 \newcommand{\stPeriodTerm}{punto}
 \newcommand{\stCommentTerm}{comentario}
-\newcommand{\stStringTerm}{cadena de caracteres}
+\newcommand{\stStringTerm}{string}
 
 \newcommand{\stGlossaryTerm}{Glosario}
 
 \newcommand{\stAndTerm}{y}
 \newcommand{\stOrTerm}{o}
 
-
 \newcommand{\stBlockTerm}{Bloques}
 \newcommand{\stBlockDefinition}{
 
   Los Bloques son objetos que contienen código que no se ejecuta
   inmediatamente.  Son la base para estructuras de control como
-  condicionales (decisiones) o lazos.  Se pueden utilizar para agregar
+decisiones condicionales o lazos.  Se pueden utilizar para agregar
   comportamiento , ej, en los items de un menu.
 
-
   \begin{displaycode}
-    \#('Holla ' 'Mundo')
+    \#('Hola' ' Mundo')
 
     \hspace{1cm}  do: [:string | Transcript show: string].
   \end{displaycode}
 
-  El ejemplo envía el mensaje \code{do:} a un array de strings con un
+  El ejemplo envía el mensaje \code{do:} a un arreglo de strings con un
   bloque como parámetro. El bloque se evalúa una vez por cada elemento
-  del array. El parámetro del bloque, \code{string}, contiene cada
-  elemento del array, uno a la vez. Como resultado de toda la
-  expresión se muestran en el trascript los strings \code{'Hola '} y
-  luego \code{'Mundo'}.
+  del arreglo. El parámetro del bloque \code{string} contiene cada
+  elemento del arreglo, uno a la vez. Como resultado de toda la
+  expresión se muestran en el trascript los strings \code{'Hola'} y
+  luego \code{' Mundo'}.
 
 }
 
-\newcommand{\stSqueakCodeBrowserSize}{0.1}
+\newcommand{\stSqueakCodeBrowserSize}{.67}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\seaSubtitle}{El framework para desarrollar sofisticadas aplicaciones web en Smalltalk}
 
 %%% Local Variables:
 %%% coding: utf-8-unix
