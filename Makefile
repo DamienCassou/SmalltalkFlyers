@@ -1,7 +1,10 @@
-languages: french english spanish german portuguese
+languages: french english spanish german portuguese catalan
 
 french: 
 	./make-flyers.sh french
+
+catalan: 
+	./make-flyers.sh catalan
 
 portuguese: 
 	./make-flyers.sh portuguese

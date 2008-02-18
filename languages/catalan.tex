@@ -1,0 +1,246 @@
+\newcommand{\stSmalltalkSubtitle}
+{un llenguatge de programació\\
+  purament \textbf{orientat a objectes}\\
+  i un entorn \textbf{dinàmic}}
+
+\newcommand{\stSmalltalkConceptsTerm}{Conceptes Importants d'Smalltalk}
+\newcommand{\stSmalltalkConceptsDefinition} {Smalltalk és un
+llenguatge \emph{orientat a objectes}, amb \emph{tipat dinàmic} i una
+sintaxi senzilla que es pot aprendre en \emph{quinze minuts}.
+El seu principal avantatge és ser \emph{molt consistent}:
+
+\begin{itemize}
+\item tot és un objecte: classes, mètodes, nombres, etc.
+\item un nombre petit de regles, sense excepcions!
+\end{itemize}
+
+Smalltalk s'executa sobre una \emph{màquina virtual}. El desenvolupament
+té lloc dins d'una \emph{imatge}, en la que viuen i poden ser modificats tots els objectes.}
+
+\newcommand{\stSmalltalkSyntaxTerm}{Sintaxi d'Smalltalk}
+\newcommand{\stReservedWordsTerm}{Paraules reservades}
+\newcommand{\stReservedCaractersTerm}{Caràcters reservats}
+
+\newcommand{\stMessageSendingTerm}{Enviament de missatges}
+\newcommand{\stMessageSendingDefinition}
+{Un mètode és cridat enviant un missatge a un objecte, el receptor del missatge, el missatge retorna un objecte. El missatge està basat en el llenguatge natural, amb subjecte, verb i complements. Hi ha tres tipus de missatges: unari, binari i paraula clau.}
+
+\newcommand{\stUnaryMessagesTerm}{Missatges unaris.}
+\newcommand{\stUnaryMessagesDefinition}
+{Un missatge unari no té arguments
+
+\begin{displaycode}
+array := Array new.
+
+array size.
+\end{displaycode}
+
+El primer exemple crea i retorna una nova instància de la classe Array, enviant el missatge \code{new}.
+El segon exemple demana la mida d'aquesta taula (\code{array}), i retorna \code{0}.}
+
+\newcommand{\stBinaryMessagesTerm}{Missatges binaris.}
+\newcommand{\stBinaryMessagesDefinition}
+{Un missatge binari pren només un argument, el nom és un símbol i s'utilitza sovint
+per a expressions aritmètiques.
+
+\begin{displaycode}
+3 + 4.
+
+'Hola', ' Món'.
+\end{displaycode}
+
+El missatge \code{+} és enviat a l'objecte \code{3} amb \code{4} de paràmetre.
+En el segon cas, el missatge \code{,} és enviat a la cadena  \code{'Hola'} amb \code{' Món'} de paràmetre.}
+
+\newcommand{\stKeywordMessagesTerm}{Missatges de paraula clau.}
+\newcommand{\stKeywordMessagesDefinition}
+{
+  Un missatge de paraula clau pot prendre un o més arguments. Els arguments s'insereixen entre cada paraula clau, després dels dos punts.
+  
+\begin{displaycode}
+'Smalltalk' allButFirst: 5.
+
+3 to: 10 by: 2.
+\end{displaycode}
+
+El primer exemple crida el mètode \code{allButFirst:} sobre una cadena de caràcters i
+amb argument \code{5}. El mètode retorna la cadena de caràcters \code{'talk'}. 
+El segon exemple retorna una col·lecció contenint els 
+elements \code{3}, \code{5}, \code{7} i \code{9}.
+
+}
+
+\newcommand{\stDevelopmentEnvironmentTerm}{Entorn de desenvolupament}
+\newcommand{\stDevelopmentEnvironmentDefinition} {La majoria de les
+  implementacions d'Smalltalk proporcionen un entorn integrat
+  que permet explorar el codi font i interaccionar amb objectes. Aquest entorn disposa de moltes
+  eines, totes implementades en Smalltalk gràcies a la seva API de reflexió:
+
+\begin{itemize}
+\item explorador de classes i mètodes;
+\item eines de \emph{refactoring};
+\item inspectors d'objectes;
+\item un depurador;
+\item administrador i controlador de versions; 
+\item i molt, molt més!
+\end{itemize}
+
+El codi pot ser inspeccionat i avaluat directament dins la imatge, amb menus i senzilles combinacions de tecles.}
+
+\newcommand{\stImplementationTerm}{Implementacions}
+\newcommand{\stImplementationDefinition}
+{
+Existeixen diverses implementacions disponibles:
+\begin{description}
+\item[Squeak:] gratuïta, \emph{open-source} i multi-plataforma.
+  Desenvolupada activament per una comunitat internacional.
+\item[VisualWorks:] propietària i multi-plataforma, disponible gratuïtament per a ús no comercial.
+\item[Gemstone:] propietària, inclou una base de dades d'objectes molt eficient.
+\item[I altres:] GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
+\end{description}
+}
+
+\newcommand{\stSqueakCodeBrowserTerm}{L'explorador de codi de Squeak}
+
+\newcommand{\stApplicationsTerm}{Aplicacions}
+\newcommand{\stApplicationsDefinition}
+{
+Des de la seva creació a principis dels 80s, Smalltalk ha estat extensament utilitzat tant en recerca
+com en el món comercial. Exemples actuals d'aplicacions Smalltalk que 
+contribueixen a fer avançar la tecnologia del programari.
+\begin{description}
+\item[Docència:] EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
+\item[Multimèdia:] Sophie, OpenCroquet, Plopp\dots
+\item[Desenvolupament web:] Seaside, Aida, Komanche, Swazoo\dots
+\item[Gestió de la persistència:] bases de dades orientades a objectes (Magma, GemStone), bases de dades relacionals (MySQL, PostgreSQL), correspondència entre objectes i relacions (Glorp).
+\end{description}
+}
+
+\newcommand{\stPloppDrawingSessionTerm}{Una sessió de dibuix amb Plopp}
+
+\newcommand{\stImageTerm}{Imatge}
+\newcommand{\stImageDefinition}
+{L'entorn Smalltalk proporciona un magatzem persistent d'objectes, la imatge. Aquesta conté el
+codi de les aplicacions (classes i mètodes), objectes que mantenen l'estat de l'aplicació i fins i
+tot pot incloure eines de desenvolupament per inspeccionar i depurar un programa mentre
+s'executa.}
+
+\newcommand{\stVMTerm}{Màquina Virtual}
+\newcommand{\stVMDefinition}
+{Una màquina virtual és un programa que és capaç d'executar altres programes. Facilita la
+portabilitat d'aplicacions.}
+
+\newcommand{\stReflexionTerm}{Reflexió}
+\newcommand{\stReflexionDefinition} 
+{Un llenguatge es diu que és reflexiu quan conté els mecanismes per inspeccionar i modificar el codi mentre
+s'està executant el programa corresponent.}
+
+\newcommand{\stDynamicTypingTerm}{Tipat Dinàmic}
+\newcommand{\stDynamicTypingDefinition} 
+{Alguns llenguatges forcen al desenvolupador a fer explícit el tipus de cada variable (integer, string\dots); això s'anomena tipat estàtic. El tipat dinàmic
+no imposa aquesta restricció, i per tant fa que els programes siguin més reutilitzables i fàcils de canviar.}
+
+\newcommand{\stBooksTerm}{Llibres}
+\newcommand{\stBooksDefinition}
+{
+\begin{itemize}
+\item Molts llibres gratuïts:\\
+  \url{http://stephane.ducasse.free.fr/Books.html}
+
+\item Smalltalk en general
+  \begin{itemize}
+  \item \emph{Smalltalk with Style}\\
+		(Edward Klimas, Suzanne Skublics and
+    David A. Thomas, gratuït)
+  \item \emph{Smalltalk by Example: the Developer's Guide} --
+		(Alec Sharp, gratuït)
+  \end{itemize}
+
+\item Squeak en particular
+  \begin{itemize}
+  \item \emph{Squeak by Example} -- (2007, gratuït)
+  \item \emph{Powerful Ideas in the Classroom}\\
+		(BJ Allen-Conn and Kim Rose)
+  \end{itemize}
+\end{itemize}
+}
+
+\newcommand{\stSmalltalkActionsTerm}{Esdeveniments}
+\newcommand{\stSmalltalkActionsDefinition}
+{
+\begin{itemize}
+\item Les conferències de l'European Smalltalk User Group (ESUG). Des de 1993,  Smalltalkers acadèmics i de sectors industrials es troben a Europa.\\
+  \url{http://www.esug.org/conferences}
+\item Conferència anual, organitzada a Nord-Amèrica per l'STIC (\url{http://www.stic.st}), una associació amb presència de sectors industrials i desenvolupadors d'Smalltalk.\\ 
+  \url{http://www.smalltalksolutions.com/}
+\end{itemize}
+}
+
+\newcommand{\stInternetWebsitesDefinition}
+{
+\begin{itemize}
+\item Lloc web oficial d'Squeak:\\ \url{http://www.squeak.org}
+\item Wiki:\\ \url{http://wiki.squeak.org}
+\item Novetats:\\ \url{http://news.squeak.org}
+\end{itemize}
+}
+
+\newcommand{\stNilDefinition}{objecte no definit (valor per defecte)}
+\newcommand{\stTrueAndFalseDefinition}{objectes booleans}
+\newcommand{\stSelfDefinition}{objecte receptor del missatge}
+\newcommand{\stSuperDefinition}{objecte receptor del missatge (dins un context  de super classe)}
+\newcommand{\stThisContextDefinition}{ pila d'execució del mètode actual}
+\newcommand{\stAssignmentOperatorDefinition}{assignació}
+\newcommand{\stReturnOperatorDefinition}{retorna un resultat des d'un mètode}
+\newcommand{\stTempsDeclarationOperatorDefinition}{declaració de tres variables temporals}
+\newcommand{\stDollarOperatorForCharacterADefinition}{caràcter \code{a}}
+\newcommand{\stLiteralArrayDefinition}{taula (array) que conté dos literals: el símbol \code{\#abc} i el nombre \code{123}}
+\newcommand{\stDotOperatorDefinition}{fi d'expressió}
+\newcommand{\stSemiColonOperatorDefinition}{missatges en cascada}
+\newcommand{\stBlockOperatorDefinition}{bloc de codi (és un objecte !)}
+
+\newcommand{\stPeriodTerm}{punt}
+\newcommand{\stCommentTerm}{comentari}
+\newcommand{\stStringTerm}{cadena}
+
+\newcommand{\stGlossaryTerm}{Glossari}
+
+\newcommand{\stAndTerm}{i}
+\newcommand{\stOrTerm}{o}
+
+\newcommand{\stBlockTerm}{Bloc}
+\newcommand{\stBlockDefinition}{
+
+  Els blocs són objectes que contenen codi que no és executat immediatament.
+  Són la base d'estructures de control com els condicionals o les repeticions. 
+  Els blocs poden ser utilitzats per associar comportaments, ex. les
+  opcions d'un menú.
+
+  \begin{displaycode}
+    \#('Hola' ' Món')
+
+    \hspace{1cm}  do: [:string | Transcript show: string].
+  \end{displaycode}
+
+  L'exemple envia el missatge \code{do:} a una taula de cadenes de caràcters amb un bloc com a paràmetre. 
+  El bloc és avaluat un cop per cada element de la taula. El paràmetre del
+  bloc, \code{string}, conté cada element de la taula, un darrera l'altre.
+  Com a resultat de tota l'expressió, les cadenes de caràcters
+  \code{'Hola'} i després \code{' Món'} es mostren al Transcript.
+}
+
+\newcommand{\stSqueakCodeBrowserSize}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\seaSubtitle}{L'entorn de treball per desenvolupar
+aplicacions web sofisticades en Smalltalk}
+
+%%% Local Variables:
+%%% coding: utf-8-unix
+%%% mode: latex
+%%% TeX-master: "../flyer"
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:
+
