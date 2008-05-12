@@ -16,3 +16,4 @@ have a line like '\input{english}', replace it by
 You may also want to add the babel extension for you language. You
 must let the english extension in place because it is used by the
 '\code' command.
+
