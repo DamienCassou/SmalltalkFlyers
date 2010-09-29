@@ -18,5 +18,5 @@ spanish:
 german:
 	./make-flyers.sh german
 
-send:
-	echo 'put -f smalltalk-flyer*.pdf' | yafc free
+# send:
+# 	echo 'put -f smalltalk-flyer*.pdf' | yafc free
