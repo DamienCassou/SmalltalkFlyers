@@ -1,5 +1,4 @@
-How translation is working
---------------------------
+# How translation is working
 
 Each langage is defined in its own LaTeX file (french.tex and
 english.tex for example). These files define commands which represent
