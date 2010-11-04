@@ -1,4 +1,4 @@
-languages: french english spanish german portuguese catalan
+languages: french english spanish german portuguese catalan vietnamese
 
 french: 
 	./make-flyers.sh french
@@ -17,6 +17,9 @@ spanish:
 
 german:
 	./make-flyers.sh german
+
+vietnamese:
+	./make-flyers.sh vietnamese vietnam
 
 # send:
 # 	echo 'put -f smalltalk-flyer*.pdf' | yafc free
