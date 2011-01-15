@@ -5,30 +5,31 @@
 
 \newcommand{\stSmalltalkConceptsTerm}{Những khái niệm quan trọng của Smalltalk}
 \newcommand{\stSmalltalkConceptsDefinition} {Smalltalk là một ngôn ngữ
-  \emph{hướng đối tượng} và \emph{định kiểu động}, với cú pháp đơn giản mà có thể học được trong \emph{mười lăm phút}.
-Lợi thế của nó chính là nhờ vào sự \emph{rất nhất quán}:
+  \emph{hướng đối tượng} và \emph{định kiểu động}, với cú pháp đơn giản, có thể học được trong \emph{mười lăm phút}.
+Lợi thế của chính của Smalltalk là nhờ vào sự \emph{nhất quán}:
 
 \begin{itemize}
-\item mỗi thứ là một đối tượng: các lớp, các phương thức, các số, v.v..
-\item số qui tắc thì rất ít, và không có ngoại lệ!
+\item tất cả các thứ đều là đối tượng: classes (lớp), methods (phương thức), số, ...
+\item số lượng quy tắc rất ít, và không có ngoại lệ!
 \end{itemize}
 
-Smalltalk chạy trên \emph{máy ảo}.  Sự phát triển chương trình
-thực hiện trên một \emph{image (ảnh)} nơi mà tất cả các đối tượng 
-tồn tại và được cập nhật.}
+Smalltalk chạy trên một \emph{máy ảo}.  Quá trình phát triển chương
+trình thực hiện trên một \emph{image (ảnh)} nơi mà tất cả các đối
+tượng được lưu trữ và sửa đổi.}
 
 \newcommand{\stSmalltalkSyntaxTerm}{Cú pháp Smalltalk}
-\newcommand{\stReservedWordsTerm}{Các từ dành riêng}
-\newcommand{\stReservedCaractersTerm}{Các ký tự dành riêng}
+\newcommand{\stReservedWordsTerm}{Các từ khóa}
+\newcommand{\stReservedCaractersTerm}{Các ký tự khóa}
 
-\newcommand{\stMessageSendingTerm}{Gửi tin nhắn}
-\newcommand{\stMessageSendingDefinition}
-{Một phương thức được gọi bằng cách gửi một tin nhắn đến một đối tượng, tin nhắn sẽ trả về một đối tượng. Tin nhắn được dựa trên ngôn ngữ tự nhiên, có chủ ngữ, động từ và bổ ngữ.
-Có ba loại tin nhắn: nhất nguyên, nhị nguyên và từ khóa.}
+\newcommand{\stMessageSendingTerm}{Gửi message (thông điệp)}
+\newcommand{\stMessageSendingDefinition} {Một method được gọi bằng
+  cách gửi một message (dựa trên ngôn ngữ tự nhiên) đến một đối tượng,
+  message sẽ trả về một đối tượng khác.  Có ba loại message: unary,
+  binary, và keyword.}
 
-\newcommand{\stUnaryMessagesTerm}{Tin nhắn nhất nguyên.}
+\newcommand{\stUnaryMessagesTerm}{Unary message (một ngôi).}
 \newcommand{\stUnaryMessagesDefinition}
-{Tin nhắn nhất nguyên là tin nhắn không có đối số (argument).
+{Unary message là message không có đối số (argument).
 
 \begin{displaycode}
 array := Array new.
@@ -36,12 +37,12 @@ array := Array new.
 array size.
 \end{displaycode}
 
-Ví dụ đầu tiên này tạo và trả về một bản thể hiện mới của lớp Array (Mảng), 
-bằng cách gửi nó tin nhắn \code{new}. Ví dụ thứ hai yêu cầu 
-kích thước của mảng này, kết quả là \code{0}.}
+Ví dụ đầu tiên này tạo và trả về một instance của class Array, bằng cách
+gửi nó message \code{new}. Ví dụ thứ hai yêu cầu kích thước của mảng
+này, kết quả là \code{0}.}
 
-\newcommand{\stBinaryMessagesTerm}{Tin nhắn nhị nguyên.}
-\newcommand{\stBinaryMessagesDefinition}{Tin nhắn nhị nguyên chỉ có một đối
+\newcommand{\stBinaryMessagesTerm}{Binary message (hai ngôi).}
+\newcommand{\stBinaryMessagesDefinition}{Binary message chỉ có một đối
 số, được đặt tên bằng một ký hiệu và thường được dùng cho
 các biểu thức toán học.
 
@@ -51,13 +52,14 @@ các biểu thức toán học.
 'Hello', ' World'.
 \end{displaycode}
 
-Tin nhắn \code{+} được gửi đến đối tượng \code{3} với \code{4} là tham số. Trong trường hợp thứ hai, tin nhắn \code{,} được gửi
-đến chuỗi kí tự \code{'Hello'} với \code{' World'} là tham số.}
+Message \code{+} được gửi đến đối tượng \code{3} với \code{4} là tham
+số. Trong trường hợp thứ hai, message \code{,} được gửi đến xâu
+\code{'Hello'} với \code{' World'} là tham số.}
 
-\newcommand{\stKeywordMessagesTerm}{Tin nhắn từ khóa.}
+\newcommand{\stKeywordMessagesTerm}{Keyword message (từ khóa).}
 \newcommand{\stKeywordMessagesDefinition}
 {
-  Tin nhắn từ khóa có thể có một hay nhiều đối số. Các đối số được chèn vào giữa mỗi từ khóa, sau mỗi dấu hai chấm.
+  Keyword message có thể có một hay nhiều đối số. Các đối số được chèn vào giữa mỗi từ khóa, sau mỗi dấu hai chấm.
 
 \begin{displaycode}
 'Smalltalk' allButFirst: 5.
@@ -65,103 +67,97 @@ Tin nhắn \code{+} được gửi đến đối tượng \code{3} với \code{4
 3 to: 10 by: 2.
 \end{displaycode}
 
-Ví dụ đầu gọi phương thức \code{allButFirst:} trên một chuỗi ký tự
-và truyền đối số \code{5}. Trả về chuỗi ký tự 
-\code{'talk'}. Ví dụ thứ hai trả về một tập hợp chứa các phần tử là 
-\code{3}, \code{5}, \code{7} and \code{9}.
-}
+Ví dụ đầu gọi method \code{allButFirst:} trên một xâu và
+truyền đối số \code{5}. Trả về xâu \code{'talk'}. Ví dụ thứ
+hai trả về một tập hợp chứa các phần tử là \code{3}, \code{5},
+\code{7} and \code{9}.  }
 
 \newcommand{\stDevelopmentEnvironmentTerm}{Môi trường phát triển}
-\newcommand{\stDevelopmentEnvironmentDefinition} {Hầu hết Smalltalk 
-được cung cấp với một môi trường phát triển tích hợp (IDE), 
-cho phép duyệt mã nguồn và tác động đến các đối tượng. Nhờ vào phản ánh API, 
-nhiều công cụ được cung cấp sẵn trong Smalltalk như sau:
+\newcommand{\stDevelopmentEnvironmentDefinition} {Hầu hết mọi bản
+  Smalltalk được cung cấp với một môi trường phát triển tích hợp
+  (IDE), cho phép duyệt mã nguồn và tác động đến các đối tượng. Nhờ
+  vào tính năng API reflection mà chúng ta có nhiều công cụ trong
+  Smalltalk như:
 
 \begin{itemize}
-\item trình duyệt lớp và phương thức (class and method browser);
-\item công cụ chỉnh cấu trúc nội bộ (refactoring tools);
+\item trình duyệt class và method (class and method browser);
+\item các công cụ cải tiến mã nguồn (refactoring tools);
 \item trình kiểm tra đối tượng (object inspectors);
-\item trình bắt sửa lỗi (debugger);
-\item công cụ quản lý phát hành và điều khiển phiên bản (release management and version control tools);
+\item trình bắt lỗi (debugger);
+\item công cụ quản lý phiên bản (release management and version control tools);
 \item và còn nhiều nữa!
 \end{itemize}
 
-Mã có thể được kiểm tra và định giá trị trực tiếp trong
-image (ảnh), bằng cách dùng các tổ hợp phím đơn và các
-trình đơn đầy đủ.}
+Mã nguồn có thể được kiểm tra và thi hành trực tiếp trong image,
+bằng cách dùng các tổ hợp phím đơn giản hoặc menu.}
 
-\newcommand{\stImplementationTerm}{Phát hành}
+\newcommand{\stImplementationTerm}{Các bản thi hành Smalltalk}
 \newcommand{\stImplementationDefinition}
 {
-Có nhiều Smalltalk được phát hành:
+Có nhiều bản thi hành Smalltalk hiện tại:
 \begin{description}
-\item[Squeak \& Pharo:] miễn phí, mã nguồn mở và hỗ trợ đa nền. Được 
-phát triển năng động.
-\item[VisualWorks:] có chủ quyền, hỗ trợ đa nền, miễn phí cho 
-ứng dụng phi thương mại.
-\item[Gemstone:] phát hành có chủ quyền bao gồm cơ sở dữ liệu 
-đối tượng hiệu quả cao.
-\item[Và những thứ khác:] GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk, Dolphin\dots
+\item[Squeak \& Pharo:] tự do, nguồn mở, đa nền tảng. Được phát triển
+  liên tục.
+\item[VisualWorks:] chủ quyền, đa nền tảng, miễn phí cho ứng dụng
+  phi thương mại.
+\item[Gemstone:] chủ quyền, có object database hiệu suất cao.
+\item[Và các bản khác:] GNU Smalltalk, Smalltalk/X, SyX, VA Smalltalk,
+  Dolphin\dots
 \end{description}
 }
 
 \newcommand{\stSqueakCodeBrowserTerm}{Trình duyệt mã Pharo}
 
-\newcommand{\stApplicationsTerm}{Chương trình ứng dụng}
-\newcommand{\stApplicationsDefinition}
-{
-Từ khi được lập ra từ đầu những năm 1980, Smalltalk đã 
-được sử dụng rộng rãi trong nghiên cứu học thuật cũng như 
-trong những ứng dụng thương mại. Sau đây là những ứng 
-dụng Smalltalk tiêu biểu đang được phát triển.
+\newcommand{\stApplicationsTerm}{Ứng dụng}
+\newcommand{\stApplicationsDefinition} { Ngay từ khi ra đời vào những
+  năm 1980, Smalltalk đã được sử dụng rộng rãi trong nghiên cứu cũng
+  như trong những ứng dụng thương mại. Sau đây là những ứng dụng
+  Smalltalk tiêu biểu đang được phát triển.
 \begin{description}
 \item[Giảng dạy:] EToys (Squeak), SqueakBot, BotsInc, Scratch\dots
-\item[Đa phương tiện (Multimedia):] Sophie, OpenCroquet, Plopp\dots
-\item[Phát triển Web:] Seaside, Aida, Komanche, Swazoo\dots
-\item[Quản lý lưu trữ:] hệ quản lý dữ liệu hướng đối tượng (Magma, GemStone), hệ quản lý dữ liệu quan hệ (MySQL, PostgreSQL), trình ánh xạ quan hệ  đối tượng (Glorp).
+\item[Multimedia:] Sophie, OpenCroquet, Plopp\dots
+\item[Phát triển web:] Seaside, Aida, Komanche, Swazoo\dots
+\item[Quản lý lưu trữ:] object oriented databases (Magma, GemStone),
+  relational databases (MySQL, PostgreSQL), object relational mapping
+  (Glorp).
 \end{description}
 }
 
 \newcommand{\stApplicationScreenshotPicture}{olpc-etoys}
 \newcommand{\stApplicationScreenshotPictureWidth}{.56}
-\newcommand{\stApplicationScreenshotTerm}{Etoys và DrGeo trên máy Mỗi Trẻ Em Một Máy Tính (OLPC)}
+\newcommand{\stApplicationScreenshotTerm}{Etoys và DrGeo trên máy XO-OLPC}
 
 \newcommand{\stImageTerm}{Image (Ảnh)}
-\newcommand{\stImageDefinition}
-{Môi trường Smalltalk có một đối tượng để 
-lưu trữ gọi là image (ảnh). Image (ảnh) chứa mã của ứng 
-dụng (gồm các lớp (classes) và các phương thức (methods)), 
-chứa các đối tượng giữ trạng thái của ứng dụng và có thể 
-chứa cả các công cụ phát triển ứng dụng để kiểm tra và 
-tìm lỗi chương trình trong khi nó đang thi hành.}
+
+\newcommand{\stImageDefinition} {Môi trường Smalltalk có một đối tượng
+  lưu trữ gọi là image, chứa mã nguồn (gồm class và method), cùng các
+  đối tượng lưu trạng thái của ứng dụng. Image còn có thể chứa các
+  công cụ phát triển, giúp kiểm tra và bắt lỗi chương trình.}
 
 \newcommand{\stVMTerm}{Virtual Machine (Máy ảo)}
-\newcommand{\stVMDefinition}
-{Máy ảo là một chương trình có 
-khả năng thi hành các chương trình khác. Nó làm cho 
-ứng dụng có tính uyển chuyển linh hoạt.}
+\newcommand{\stVMDefinition} {Máy ảo (VM) là một chương trình có khả
+  năng thi hành các chương trình khác, giúp ứng dụng chạy trên nhiều
+  nền tảng.}
 
-\newcommand{\stReflexionTerm}{Reflection (Phản ánh)}
-\newcommand{\stReflexionDefinition} {Một ngôn ngữ được cho là có tính 
-phản ánh khi mà nó bao gồm cơ chế kiểm tra và cập nhật 
-mã trong khi chương trình đang thi hành.}
+\newcommand{\stReflexionTerm}{Reflection}
+\newcommand{\stReflexionDefinition} {Reflection là một tính năng cho
+  phép kiểm tra và cập nhật mã nguồn khi chương trình đang chạy.}
 
 \newcommand{\stDynamicTypingTerm}{Dynamic typing (Định kiểu động)}
-\newcommand{\stDynamicTypingDefinition} {Một số ngôn ngữ buộc 
-lập trình viên định rõ kiểu của từng biến (integer (số 
-nguyên), string (chuỗi ký tự), \dots); được gọi là định kiểu 
-cố định. Định kiểu động không buộc theo sự áp đặt này, 
-vì thế làm cho chương trình dễ tái sử dụng hơn và dễ 
-thay đổi hơn.}
+\newcommand{\stDynamicTypingDefinition} {Một số ngôn ngữ buộc lập
+  trình viên định rõ kiểu của từng biến (integer, string, \dots); được
+  gọi là định kiểu tĩnh (static typing). Dynamic typing không yêu cầu
+  điều này, vì thế làm cho chương trình dễ tái sử dụng hơn và thay đổi
+  hơn.}
 
 \newcommand{\stBooksTerm}{Sách}
 \newcommand{\stBooksDefinition}
 {
 \begin{itemize}
-\item Nhiều sách miễn phí về Smalltalk có ở đây:\\
+\item Nhiều sách tự do về Smalltalk:\\
   \url{http://stephane.ducasse.free.fr/FreeBooks.html}
 
-\item Smalltalk đại cương
+\item Smalltalk nói chung
   \begin{itemize}
   \item \emph{Smalltalk with Style}\\
 		(Edward Klimas, Suzanne Skublics and
@@ -183,11 +179,12 @@ thay đổi hơn.}
 \newcommand{\stSmalltalkActionsDefinition}
 {
 \begin{itemize}
-\item European Smalltalk User Group conferences (ESUG) (Hội nghị nhóm người dùng 
-Smalltalk châu Âu). Từ năm 1993, Những người dùng Smalltalk (Smalltalkers) trong công nghiệp và trong học thuật tổ chức họp tại châu Âu.\\
-  \url{http://www.esug.org/conferences}
+\item European Smalltalk User Group conferences (ESUG) Hội thảo Nhóm
+  người dùng Smalltalk châu Âu). Từ năm 1993, gồm những người dùng
+  Smalltalk (Smalltalkers) trong công nghiệp và trong học
+  thuật.\\ \url{http://www.esug.org/conferences}
 \item Hội nghị thường niên, được tổ chức ở Bắc Mỹ bởi STIC (\url{http://www.stic.st}), hội liên
-hiệp những công ty và những nhà phát triển Smalltalk.\\
+  hiệp những công ty và những nhà phát triển Smalltalk.\\
   \url{http://www.smalltalksolutions.com/}
 \end{itemize}
 }
@@ -195,29 +192,30 @@ hiệp những công ty và những nhà phát triển Smalltalk.\\
 \newcommand{\stInternetWebsitesDefinition}
 {
 \begin{itemize}
-\item Trang web chính thức về Squeak:\\ \url{http://www.squeak.org}
-\item Wiki (Thảo luận nhóm):\\ \url{http://wiki.squeak.org}
+\item Trang web chính thức của Squeak:\\ \url{http://www.squeak.org}
+\item Wiki:\\ \url{http://wiki.squeak.org}
 \item Tin tức:\\ \url{http://news.squeak.org}
+\item Mailing-list cộng đồng Smalltalker Việt Nam:\\ \url{http://lists.squeakfoundation.org/mailman/listinfo/smalltalk-vn}
 \end{itemize}
 }
 
-\newcommand{\stNilDefinition}{đối tượng chưa xác định (giá trị mặc định của biến)}
-\newcommand{\stTrueAndFalseDefinition}{đối tượng luận lý (boolean)}
+\newcommand{\stNilDefinition}{đối tượng chưa định (mặc định)}
+\newcommand{\stTrueAndFalseDefinition}{đối tượng logic (boolean)}
 \newcommand{\stSelfDefinition}{đối tượng hiện tại}
-\newcommand{\stSuperDefinition}{đối tượng hiện tại trong ngữ cảnh của lớp cha (super class)}
-\newcommand{\stThisContextDefinition}{stack (bộ nhớ chồng) tại thời điểm thực thi của phương thức}
+\newcommand{\stSuperDefinition}{đối tượng hiện tại (trong super class)}
+\newcommand{\stThisContextDefinition}{stack tại thời điểm thực thi của method}
 \newcommand{\stAssignmentOperatorDefinition}{gán giá trị}
-\newcommand{\stReturnOperatorDefinition}{trả về kết quả của phương thức}
+\newcommand{\stReturnOperatorDefinition}{trả về kết quả của method}
 \newcommand{\stTempsDeclarationOperatorDefinition}{khai báo ba biến tạm}
 \newcommand{\stDollarOperatorForCharacterADefinition}{ký tự \code{a}}
-\newcommand{\stLiteralArrayDefinition}{mảng chứa hai phần tử: ký hiệu (symbol) \code{\#abc} và số \code{123}}
+\newcommand{\stLiteralArrayDefinition}{mảng gồm hai phần tử: symbol \code{\#abc} và số \code{123}}
 \newcommand{\stDotOperatorDefinition}{kết thúc biểu thức}
-\newcommand{\stSemiColonOperatorDefinition}{gửi tin nối tiếp (message cascade)}
-\newcommand{\stBlockOperatorDefinition}{Khối mã (là một đối tượng!)}
+\newcommand{\stSemiColonOperatorDefinition}{message cascade}
+\newcommand{\stBlockOperatorDefinition}{block (là một đối tượng!)}
 
-\newcommand{\stPeriodTerm}{dấu chấm câu}
+\newcommand{\stPeriodTerm}{dấu chấm}
 \newcommand{\stCommentTerm}{ghi chú}
-\newcommand{\stStringTerm}{chuỗi ký tự}
+\newcommand{\stStringTerm}{xâu ký tự}
 
 \newcommand{\stGlossaryTerm}{Thuật ngữ}
 
@@ -227,11 +225,10 @@ hiệp những công ty và những nhà phát triển Smalltalk.\\
 \newcommand{\stBlockTerm}{Block (Khối)}
 \newcommand{\stBlockDefinition}{
 
-  Các khối là các đối tượng chứa mã không được thực hiện
-ngay. Chúng là cơ sở cho cấu trúc điều khiển như là điều
-kiện rẽ nhánh hay điều khiển lặp. Đồng thời, các khối có thể
-được dùng để gắn vào các xử lý tương tác, ví dụ gắn vào
-các mục trình đơn.
+  Các block là các đối tượng chứa mã không được thực thi ngay. Chúng
+  là cơ sở cho cấu trúc điều khiển như rẽ nhánh hay lặp. Đồng thời,
+  các block có thể được dùng trong xử lý tương tác, ví dụ: gắn vào
+  menu.
 
   \begin{displaycode}
     \#('Hello ' 'World')
@@ -239,12 +236,11 @@ các mục trình đơn.
     \hspace{1cm}  do: [:string | Transcript show: string].
   \end{displaycode}
 
-  Ví dụ này gửi tin nhắn \code{do:} đến một mảng các chuỗi ký tự với 
-một khối là tham số. Khối được tính giá trị một lần cho mỗi
-phần tử trong mảng. Tham số khối \code{string} là mỗi phần tử
-của mảng, lần lượt cái này tiếp theo cái khác. Kết quả của
-toàn biểu thức, lần lượt, chuỗi ký tự \code{'Hello '} rồi đến \code{'World'} 
-được hiển thị trong cửa sổ theo dõi (Transcript).
+  Ví dụ này gửi message \code{do:} đến một mảng các xâu với
+  tham số là một block. Block sẽ được thi hành với mỗi phần từ của
+  mảng một lần. Tham số block \code{string} chứa lần lượt từng phần tử
+  của. Kết quả của cả biểu thức là xâu \code{'Hello '} rồi đến
+  \code{'World'} được hiển thị trong Transcript một cách lần lượt.
    
 }
 
@@ -252,13 +248,14 @@ toàn biểu thức, lần lượt, chuỗi ký tự \code{'Hello '} rồi đế
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\seaSubtitle}{Sườn ứng dụng để phát triển những ứng dụng web phức tạp trong Smalltalk}
+\newcommand{\seaSubtitle}{Framework để phát triển các ứng dụng web
+  công phu trong Smalltalk}
 
 %%% Local Variables:
 %%% coding: utf-8-unix
 %%% mode: latex
 %%% TeX-master: "../flyer"
 %%% TeX-PDF-mode: t
-%%% ispell-local-dictionary: "english"
+%%% ispell-local-dictionary: "vietnamese"
 %%% End:
 
